@@ -108,8 +108,6 @@ En ensamblador, cada instrucción \(mnemotécnico\) se corresponde a una instruc
 
 En el siguiente gráfico puedes ver parte de un programa escrito en lenguaje ensamblador. En color rojo se ha resaltado el código máquina en **hexadecimal**, en magenta el código escrito en ensamblador y en azul, las direcciones de memoria donde se encuentra el código.
 
-  
-
 ![](.gitbook/assets/prog01_cont_r10_ensamblador.jpg)
 
 Pero aunque ensamblador fue un intento por aproximar el lenguaje de los procesadores al lenguaje humano, presentaba múltiples dificultades:
