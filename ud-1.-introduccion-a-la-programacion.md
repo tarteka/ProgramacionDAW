@@ -390,3 +390,46 @@ Esto quiere decir que en Java se pueden utilizar varios alfabetos como el Griego
 
 El estándar Unicode originalmente utilizaba 16 bits, pudiendo representar hasta 65.536 caracteres distintos, que es el resultado de elevar dos a la potencia dieciséis. Actualmente Unicode puede utilizar más o menos bits, dependiendo del formato que se utilice: **UTF-8**, **UTF-16** ó **UTF-32. A cada carácter le corresponde unívocamente un número entero perteneciente al intervalo de 0 a 2 elevado a n, siendo n el número de bits utilizados para representar los caracteres. Por ejemplo, la letra** ñ es el entero 164. Además, el código Unicode es “compatible” con el código ASCII, ya que para los caracteres del código ASCII, Unicode asigna como código los mismos 8 bits, a los que les añade a la izquierda otros 8 bits todos a cero. La conversión de un carácter ASCII a Unicode es inmediata.
 
+> **Recomendación**: Una buena práctica de programación es seleccionar nombres adecuados para las variables, eso ayuda a que el programa se autodocumente, y evita un número excesivo de comentarios para aclarar el código.
+
+#### 4.2.2 Convenios y reglas para nombrar variables
+
+A la hora de nombrar un identificador existen una serie de normas de estilo de uso generalizado que, no siendo obligatorias, se usan en la mayor parte del código Java. Estas reglas para la nomenclatura de variables son las siguientes:
+
+* **Java distingue las mayúsculas de las minúsculas**. Por ejemplo, `Alumno` y `alumno` son variables diferentes.
+* **No se suelen utilizar identificadores que comiencen con «$» o «\_»,** además el símbolo del dólar, por convenio, no se utiliza nunca.
+* **No se puede utilizar el valor booleano** \(`true` o `false`\) **ni el valor nulo** \(`null`\).
+* Los **identificadores deben ser lo más descriptivos posibles**. Es mejor usar palabras completas en vez de abreviaturas crípticas. Así nuestro código será más fácil de leer y comprender. En muchos casos también hará que nuestro código se autodocumente. Por ejemplo, si tenemos que darle el nombre a una variable que almacena los datos de un cliente sería recomendable que la misma se llamara algo así como `FicheroClientes` o `ManejadorCliente`, y no algo poco descriptivo como `Cl33`.
+
+Además de estas restricciones, en la siguiente tabla puedes ver otras convenciones, que no siendo obligatorias, sí son recomendables a la hora de crear identificadores en Java.
+
+| Identificador | Convención | Ejemplo |
+| :--- | :--- | :--- |
+| Variable | Comienza por letra minúscula, y si tienen más de una palabra se colocan juntas y el resto comenzando por mayúsculas. | `numAlumnos, suma` |
+| Constante | En letras mayúsculas, separando las palabras con el guión bajo, por convenio el guión bajo no se utiliza en ningún otro sitio. | `TAM_MAX, PI` |
+| Clase | Comienza por letra mayúscula. | `String, MiTipo` |
+| Método | Comienza con letra minúscula y sigue las mismas reglas que las variables | `modificaValor, obtieneValor` |
+
+#### 4.2.3 Palabras reservadas
+
+Las palabras reservadas, a veces también llamadas palabras clave o keywords , son secuencias de caracteres formadas con letras ASCII cuyo uso se reserva al lenguaje y, por tanto, **no pueden utilizarse para crear identificadores.**
+
+ Las palabras reservadas en Java son:
+
+|  |  |  |  |  |
+| :--- | :--- | :--- | :--- | :--- |
+| `abstract` | `continue` | `for` | `new` | `switch` |
+| `assert` | `default` | `goto` | `package` | `synchronized` |
+| `boolean` | `do` | `if` | `private` | `this` |
+| `break` | `double` | `implements` | `protected` | `throw` |
+| `byte` | `else` | `import` | `public` | `throws` |
+| `case` | `enum` | `instanceof` | `return` | `transient` |
+| `catch` | `extends` | `int` | `short` | `try` |
+| `char` | `final` | `interface` | `static` | `void` |
+| `class` | `finally` | `long` | `strictfcode` | `volatile` |
+| `const` | `float` | `native` | `super` | `while` |
+
+Hay palabras reservadas que no se utilizan en la actualidad, como es el caso de `const` y `goto`, que apenas se utilizan en la actual implementación del lenguaje Java. Por otro lado, puede haber otro tipo de palabras o texto en el lenguaje que aunque no sean palabras reservadas tampoco se pueden utilizar para crear identificadores. Es el caso de `true` y `false` que, aunque puedan parecer palabras reservadas, porque no se pueden utilizar para ningún otro uso en un programa, técnicamente son **literales booleanos**. Igualmente, null es considerado un literal, no una palabra reservada.
+
+> Cuando tras haber consultado la documentación de Java aún no tengas seguridad de cómo funciona alguna de sus características, pruébala en tu ordenador, y analiza cada mensaje de error que te dé el compilador para corregirlo. Busca en foros de Internet errores similares para ayudarte de la experiencia de otros usuarios y usuarias.
+
