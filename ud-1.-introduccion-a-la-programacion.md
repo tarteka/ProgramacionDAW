@@ -467,20 +467,20 @@ Todos los lenguajes de programación disponen de alguna forma de introducir come
 
 * **Comentarios de una sola línea**. Utilizaremos el delimitador `//` para introducir comentarios de sólo una línea.
 
-```java
+```text
 // comentario de una sola línea
 ```
 
 * **Comentarios de múltiples líneas**. Para introducir este tipo de comentarios, utilizaremos una barra inclinada y un asterisco \(`/*`\), al principio del párrafo y un asterisco seguido de una barra inclinada \(`*/`\) al final del mismo.
 
-```java
+```text
 /* Esto es un comentario
 de varias líneas */
 ```
 
 * **Comentarios Javadoc**. Utilizaremos los delimitadores /\*\* y \*/. Al igual que con los comentarios tradicionales, el texto entre estos delimitadores será ignorado por el compilador. Este tipo de comentarios se emplean para generar documentación automática del programa. A través del programa javadoc, incluido en JavaSE , se recogen todos estos comentarios y se llevan a un documento en formato .html.
 
-```java
+```text
 /** Comentario de documentación.
 Javadoc extrae los comentarios del código y
 genera un archivo html a partir de este tipo de comentarios
