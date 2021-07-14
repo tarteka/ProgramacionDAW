@@ -293,3 +293,56 @@ La versatilidad del lenguaje de programación Java permite al programador crear 
   * Son programas creados para dispositivos embebidos \(se dedican a una sola actividad\), más específicamente para la máquina virtual Java MicroEdition \(Java ME\).
   * Generalmente son juegos y aplicaciones que se ejecutan en teléfonos móviles.
 
+## 3 Entornos Integrados de Desarrollo \(IDE\)
+
+En los comienzos de Java la utilización de la línea de comandos era algo habitual. El programador escribía el código fuente empleando un editor de texto básico, seguidamente, pasaba a utilizar un compilador y con él obtenía el código compilado. En un paso posterior, necesitaba emplear una tercera herramienta para el ensamblado del programa. Por último, podía probar a través de la línea de comandos el archivo ejecutable. El problema surgía cuando se producía algún error, lo que provocaba tener que volver a iniciar el proceso completo.
+
+Estas circunstancias hacían que el desarrollo de software no estuviera optimizado. Con el paso del tiempo, se fueron desarrollando aplicaciones que incluían las herramientas necesarias para realizar todo el proceso de programación de forma más sencilla, fiable y rápida. Para cada lenguaje de programación existen múltiples entornos de desarrollo, cada uno con sus ventajas e inconvenientes. Dependiendo de las necesidades de la persona que va a programar, la facilidad de uso o lo agradable que le resulte trabajar con él, se elegirá entre unos u otros entornos.
+
+### 3.1 ¿Qué son?
+
+Son aplicaciones que ofrecen la posibilidad de llevar a cabo el proceso completo de desarrollo de software a través de un único programa. Podremos realizar las labores de edición, compilación, depuración, detección de errores, corrección y ejecución de programas escritos en Java o en otros lenguajes de programación, bajo un entorno gráfico \(no mediante línea de comandos\). Junto a las capacidades descritas, cada entorno añade otras que ayudan a realizar el proceso de programación, como por ejemplo: código fuente coloreado, plantillas para diferentes tipos de aplicaciones, creación de proyectos, etc.
+
+Hay que tener en cuenta que un entorno de desarrollo no es más que una fachada para el proceso de compilación y ejecución de un programa. ¿Qué quiere decir eso? Pues que si tenemos instalado un IDE y no tenemos instalado el compilador, no tenemos nada.
+
+### **3.2 IDE's actuales**
+
+Existen en el mercado multitud de entornos de desarrollo para el lenguaje Java, los hay de libre distribución, de pago, para principiantes, para profesionales, que consumen más recursos, que son más ligeros, más amigables, más complejos que otros, etc.
+
+Entre los que son gratuitos o de libre distribución tenemos:
+
+* **NetBeans**
+* **Eclipse**
+* **BlueJ**
+* **jGRASP**
+* **Jcreator LE**
+
+Entre los que son propietarios o de pago tenemos:
+
+* **IntelliJ IDEA**
+* **Jbuilder**
+* **Jcreator**
+* **JDeveloper**
+
+![Comparativa entornos para Java](.gitbook/assets/comparativa-ides-java.png)
+
+Pero, ¿cuál o cuáles son los más utilizados por la comunidad de programadores Java? El puesto de honor se lo disputan entre **Eclipse, NetBeans** y IntelliJ IDEA. Los dos primeros son gratuitos, con soporte de idiomas y multiplataforma \(Windows, Linux, MacOS\).  
+  
+¿Y cuál será con el que vamos a trabajar? Pues aunque parezca mentira, ninguno de ellos. Vamos a utilizar [**jGRASP**](http://www.jgrasp.org/index.html) , un entorno de desarrollo ligero, creado por la Universidad de Auburn para mejorar la comprensión del software y facilitar el aprendizaje de la programación. Está desarrollado en Java y funciona con Windows, Linux y MacOS sobre máquinas virtuales de Java.
+
+### **3.3 El entorno jGRASP**
+
+jGRASP es un entorno de desarrollo ligero que ha sido específicamente creado para proporcionar herramientas de visualización de software que facilitan la conprensión del código a programadores principiantes.
+
+En concreto proporciona 3 herramientas principales de visualización: 
+
+* Diagramas de estructuras de control para visualización de código fuente
+* Diagramas de clases UML para visualizar la arquitectura de proyectos
+* Visor de datos primitivos y objetos en tiempo de ejecución
+
+Así mismo, incluye un entorno de trabajo innovador, un debugger y la ventana "Interactions" que nos permite probar código sin crear un programa completo.
+
+Ha sido desarrollado en Java por la Universidad de Auburn, por lo que funciona en cualquier plataforma que tenga la máquina virtual de Java instalada. La página oficial de Java proporciona descargas para Windows, Mac OS y Linux.
+
+Soporta  Java,  C,  C++,  Objective-C,  Python,  Ada,  y VHDL. Por ello, no es un IDE profesional sino un IDE pensado para estudiantes que están aprendiendo a programar.  La mayoría de sus funcionalidad se orientan a facilitar la comprensión del funcionamiento del código y no a facilitar la generación de código.
+
