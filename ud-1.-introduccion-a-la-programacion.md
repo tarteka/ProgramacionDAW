@@ -433,3 +433,61 @@ Hay palabras reservadas que no se utilizan en la actualidad, como es el caso de 
 
 > Cuando tras haber consultado la documentación de Java aún no tengas seguridad de cómo funciona alguna de sus características, pruébala en tu ordenador, y analiza cada mensaje de error que te dé el compilador para corregirlo. Busca en foros de Internet errores similares para ayudarte de la experiencia de otros usuarios y usuarias.
 
+### 4.3 Salida por pantalla
+
+La salida por pantalla en Java se hace con el objeto `System.out`. Este objeto es una instancia de la clase `PrintStream` del paquete `java.lang`. Si miramos la API de `PrintStream` obtendremos la variedad de métodos para mostrar datos por pantalla, algunos de estos son:  
+
+![clase PrintStream](.gitbook/assets/prog01_cont_r56_printstream.png)
+
+* `void print(String s):` Escribe una cadena de texto.
+* `void println(String x):` Escribe una cadena de texto y termina la línea.
+
+En la orden `print` y `println`, cuando queramos escribir un mensaje y el valor de una variable debemos utilizar el operador de concatenación de cadenas \(+\), por ejemplo:
+
+```java
+System.out.println(“Bienvenido, “ + nombre);
+```
+
+Escribe el mensaje de `"Bienvenido, Carlos"`, si el valor de la variable `nombre` es Carlos.
+
+Existen unos caracteres especiales que se representan utilizando **secuencias de escape**:
+
+| Secuencia de escape | Significado | Secuencia de escape | Significado |
+| :--- | :--- | :--- | :--- |
+| `\b` | Retroceso | `\r` | Retorno de carro |
+| `\t` | Tabulador | `\''` | Carácter comillas dobles |
+| `\n` | Salto de línea | `\'` | Carácter comillas simples |
+| `\f` | Salto de página | `\\` | Barra diagonal |
+
+### 4.4 Comentarios
+
+Los comentarios son muy importantes a la hora de describir qué hace un determinado programa. A lo largo de la unidad los hemos utilizado para documentar los ejemplos y mejorar la comprensión del código. Para lograr ese objetivo, es normal que cada programa comience con unas líneas de comentario que indiquen, al menos, una breve descripción del programa, el autor del mismo y la última fecha en que se ha modificado.
+
+Todos los lenguajes de programación disponen de alguna forma de introducir comentarios en el código. En el caso de Java, nos podemos encontrar los siguientes tipos de comentarios:
+
+* **Comentarios de una sola línea**. Utilizaremos el delimitador `//` para introducir comentarios de sólo una línea.
+
+```java
+// comentario de una sola línea
+```
+
+* **Comentarios de múltiples líneas**. Para introducir este tipo de comentarios, utilizaremos una barra inclinada y un asterisco \(`/*`\), al principio del párrafo y un asterisco seguido de una barra inclinada \(`*/`\) al final del mismo.
+
+```java
+/* Esto es un comentario
+de varias líneas */
+```
+
+* **Comentarios Javadoc**. Utilizaremos los delimitadores /\*\* y \*/. Al igual que con los comentarios tradicionales, el texto entre estos delimitadores será ignorado por el compilador. Este tipo de comentarios se emplean para generar documentación automática del programa. A través del programa javadoc, incluido en JavaSE , se recogen todos estos comentarios y se llevan a un documento en formato .html.
+
+```java
+/** Comentario de documentación.
+Javadoc extrae los comentarios del código y
+genera un archivo html a partir de este tipo de comentarios
+*/
+```
+
+> **Reflexiona**: Una buena práctica de programación es añadir en la última llave que delimita cada bloque de código, un comentario indicando a qué clase o método pertenece esa llave.
+
+> **Para saber más**: Si quieres ir familiarizándote con la información que hay en la web de Oracle, en el siguiente enlace puedes encontrar más información sobre la herramienta Javadoc incluida en el Kit de Desarrollo de Java SE \(en inglés\): [Página oficial de Oracle sobre la herramienta Javadoc](http://download.oracle.com/javase/6/docs/technotes/guides/javadoc/index.html)
+
