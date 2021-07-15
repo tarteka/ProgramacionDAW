@@ -551,7 +551,7 @@ Ahora no es el momento de entrar en detalle sobre la conversión de tipos, pero 
 * **Tipos de datos sencillos o primitivos**. Representan valores simples que vienen predefinidos en el lenguaje; contienen valores únicos, como por ejemplo un carácter o un número.
 * **Tipos de datos referencia.** Se definen con un nombre o referencia \(puntero\) que contiene la dirección en memoria de un valor o grupo de valores. Dentro de este tipo tenemos por ejemplo los vectores o arrays, que son una serie de elementos del mismo tipo, o las clases, que son los modelos o plantillas a partir de los cuales se crean los objetos.
 
-#### **5. Tipos de datos primitivos**
+#### **5.2.1 Tipos de datos primitivos**
 
 Los tipos primitivos son aquéllos datos sencillos que constituyen los tipos de información más habituales: números, caracteres y valores lógicos o booleanos. Al contrario que en otros lenguajes de programación orientados a objetos, **en Java no son objetos**.
 
@@ -574,5 +574,59 @@ Por ejemplo, el tipo de dato `int` no podría representar la población mundial 
 | char | Carácter [Unicode](http://en.wikipedia.org/wiki/Unicode) | 2 | \u0000 a \uFFFF | ‘\u0000’ |
 | boolean | Valor Verdadero o Falso | 1 | true o false | false |
 
+**5.2.1.1 Tipos de datos reales**
 
+El tipo de dato real permite representar cualquier número con decimales. Al igual que ocurre con los enteros, la mayoría de los lenguajes definen más de un tipo de dato real, en función del número de bits usado para representarlos. Cuanto mayor sea ese número:
+
+* **Más grande podrá ser el número real representado en valor absoluto**
+* **Mayor será la precisión** de la parte decimal
+
+Entre cada dos números reales cualesquiera, siempre tendremos infinitos números reales, por lo que **la mayoría de ellos los representaremos de forma aproximada.** Por ejemplo, en la aritmética convencional, cuando dividimos 10 entre 3, el resultado es 3.3333333…, con la secuencia de 3 repitiéndose infinitamente. En el ordenador sólo podemos almacenar un número finito de bits, por lo que el almacenamiento de un número real será siempre una aproximación.
+
+Los números reales se representan en coma flotante, que consiste en trasladar la coma decimal a la primera cifra significativa del valor, con objeto de poder representar el máximo de números posible.
+
+Un número se expresa como: ![Valor igual a mantisa por dos elevado a exponente.](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAAARBAMAAAARYzyGAAAALVBMVEX////V1dXKysrAwMC1tbWpqamenp6SkpJubm5iYmJUVFRGRkY4ODgoKCgAAACO6viLAAAAAXRSTlMAQObYZgAAAjdJREFUSMfdlb9uFDEQxn/2NURCI4sHsKykt1bpaLahIc016fcBKHiGFCmgDR3FCYmKgmuo6HiUsfeSIyHMM1B4T1wSUHIUIDGNV+OZ+eafv4W/Lco/kv8HWKbTmSKXpsRTC0QL7uvcIBrx1JSrpRLtrrv9cfYb4NgpWVAulgfq6kzlRRXcKFwskyLgRgGQq6VyaXrTfWexYVCiBc57pQigIyoJFekEOTZ0RBGQ41be4y9bePmhQO7WrGYf3+PHWWVRN/kXVPCKhMyeJSheEdo3ILqFVx880nQXeO8dr1r7BZhVr4IkMiMCeJWO/LNKUVzZ1FF23aXtVosijF5l/2qAR29ykK6Hykqly0iSOase6Vqde5+QBM5WLYNoAestbEfdN4022di+KfbNkALOStNOmbwlWnD2vIAMBWcFlBicFQRXiJMSmH0mA9I9PcErrs7Ur0evYGZmBn69SOdVmo1fL5LCAHmAmHLznIA//L4nv1hIV4BM7pBEDKgcndxo69EZiyDNRo7OUKhQe1htPJv4rR2R7l5gSUAlBgQq6G0n6fzY7mJAOqatqG0ulbiZS/w5ILm8l6OuXzYy6EFA8bodoMVzhTzZxOAbsFfgSWnaHXcTgO+lAb+ek+coMUzPazNjMl4Z82SDHKrXiBwq0DftlOBOBHTdAYyzdeWiMvpy5zlXJHFem01FhiTPCjIkSb4wHqybvT/fjfkagUXrldho7/YvRBHaXa8oznAW2mGhaQFkYQ/m+h80hwIn4xp9gAAAAABJRU5ErkJggg==)
+
+En concreto, sólo se almacena la **mantisa** y el exponente al que va elevada la base. Los bits empleados por la mantisa representan la **precisión** del número real, es decir, el número de cifras decimales significativas que puede tener el número real, mientras que los bits del exponente expresan la diferencia entre el mayor y el menor número representable, lo que viene a ser el **intervalo de representación**.
+
+En Java las variables de tipo `float` se emplean para representar los números en coma flotante de simple precisión de 32 bits, de los cuales 24 son para la mantisa y 8 para el exponente. La mantisa es un valor entre -1.0 y 1.0 y el exponente representa la potencia de 2 necesaria para obtener el valor que se quiere representar. Por su parte, las variables tipo `double` representan los números en coma flotante de doble precisión de 64 bits, de los cuales 53 son para la mantisa y 11 para el exponente.
+
+> La mayoría de los programadores en Java emplean el tipo `double` cuando trabajan con datos de tipo real, es una forma de asegurarse de que los errores cometidos por las sucesivas aproximaciones sean menores. De hecho, Java considera los valores en coma flotante como de tipo `double` por defecto. Con el objetivo de conseguir la máxima portabilidad de los programas, Java utiliza el estándar internacional **IEEE 754** para la representación interna de los números en coma flotante, que es una forma de asegurarse de que el resultado de los cálculos sea el mismo para diferentes plataformas.
+
+> **Para saber más:** La siguiente página es la web oficial sobre el estándar internacional IEEE 754-2008 para representación de números en coma flotante \(en inglés\): [Notación IEEE 754](https://es.wikipedia.org/wiki/IEEE_coma_flotante)
+
+**5.2.1.2 Literales de los tipos primitivos**
+
+Un **literal**, **valor literal** o **constante literal** es un valor concreto para los tipos de datos primitivos del lenguaje, el tipo `String` o el tipo `null`.
+
+Los **literales booleanos** tienen dos únicos valores que puede aceptar el tipo: `true` y `false`. Por ejemplo, con la instrucción `boolean encontrado = true;` estamos declarando una variable de tipo booleana a la cual le asignamos el valor literal `true`.
+
+ Los **literales enteros** se pueden representar en tres notaciones:
+
+* **Decimal**: por ejemplo `20`. Es la forma más común.
+* **Octal**: por ejemplo `024`. Un número en octal siempre empieza por cero, seguido de dígitos octales \(del 0 al 7\).
+* **Hexadecimal**: por ejemplo `0x14`. Un número en hexadecimal siempre empieza por `0x` seguido de dígitos hexadecimales \(del 0 al 9, de la ‘a’ a la ‘f’ o de la ‘A’ a la ‘F’\).
+
+Las constantes literales de tipo `long` se le debe añadir detrás una **l** ó **L**, por ejemplo `873L`, si no se considera por defecto de tipo `int`. Se suele utilizar **L** para evitar la confusión de la ele minúscula con 1.
+
+Los **literales** **reales** o en coma flotante se expresan con coma decimal o en notación científica, o sea, seguidos de un exponente **e** ó **E**. El valor puede finalizarse con una f o una F para indica el formato float o con una d o una D para indicar el formato `double` \(por defecto es `double`\). Por ejemplo, podemos representar un mismo literal real de las siguientes formas: `13.2, 13.2D, 1.32e1, 0.132E2`. Otras constantes literales reales son por ejemplo: `.54, 31.21E-5, 2.f, 6.022137e+23f, 3.141e-9d.`
+
+Un **literal carácter** puede escribirse como un carácter entre comillas simples como `'a', 'ñ', 'Z', 'p'`, etc. o por su código de la tabla Unicode, anteponiendo la secuencia de escape `‘\’` si el valor lo ponemos en octal o `‘\u’` si ponemos el valor en hexadecimal. Por ejemplo, si sabemos que tanto en ASCII como en Unicode, la letra A \(mayúscula\) es el símbolo número 65, y que 65 en octal es 101 y 41 en hexadecimal, podemos representar esta letra como `'\101'` en octal y `'\u0041'` en hexadecimal. Existen unos caracteres especiales que se representan utilizando secuencias de escape:
+
+| Secuencia de escape | Significado | Secuencia de escape | Significado |
+| :--- | :--- | :--- | :--- |
+| `\b` | Retroceso | `\r` | Retorno de carro |
+| `\t` | Tabulador | `\''` | Carácter comillas dobles |
+| `\n` | Salto de línea | `\'` | Carácter comillas simples |
+| `\f` | Salto de página | `\\` | Barra diagonal |
+
+**Normalmente, los objetos en Java deben ser creados con la orden `new`. Sin embargo, los literales String no lo necesitan ya que son objetos que se crean implícitamente por Java.**
+
+ Los **literales de cadenas de caracteres** se indican entre comillas dobles. En el ejemplo anterior “`El primer programa`” es un literal de tipo cadena de caracteres. Al construir una cadena de caracteres se puede incluir cualquier carácter Unicode excepto un carácter de retorno de carro, por ejemplo en la siguiente instrucción utilizamos la secuencia de escape \’’ para escribir dobles comillas dentro del mensaje:
+
+```text
+String texto = "Juan dijo: \"Hoy hace un día fantástico…\"";
+```
+
+En el ejemplo anterior de tipos enumerados ya estábamos utilizando secuencias de escape, para introducir un salto de línea en una cadena de caracteres, utilizando el carácter especial `\n`.
 
