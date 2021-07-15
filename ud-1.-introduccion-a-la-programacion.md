@@ -569,7 +569,7 @@ Por ejemplo, el tipo de dato `int` no podría representar la población mundial 
 | short | Entero corto | 2 | -32,768 a 32,767 | 0 |
 | int | Entero | 4 | -2,147,483,648 a 2,147,483,647 | 0 |
 | long | Entero largo | 8 | -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807 | 0L |
-| float | Numero con punto flotante de precisión individual con hasta 7 dígitos significativos | 4 | +/-1.4E-45 \(+/-1.4 times 10-45\) a +/-3.4E38 \(+/-3.4 times 1038 | 0.0f |
+| float | Numero con punto flotante de precisión individual con hasta 7 dígitos significativos | 4 | +/-1.4E-45 \(+/-1.4 times 10-45\) a +/-3.4E38 \(+/-3.4 times 1038\) | 0.0f |
 | double | Numero con punto flotante de precisión doble con hasta 16 dígitos significativos | 8 | +/-4.9E-324 \(+/-4.9 times 10-324\) a +/-1.7E308 \(+/-1.7 times 10308\) | 0.0d |
 | char | Carácter [Unicode](http://en.wikipedia.org/wiki/Unicode) | 2 | \u0000 a \uFFFF | ‘\u0000’ |
 | boolean | Valor Verdadero o Falso | 1 | true o false | false |
