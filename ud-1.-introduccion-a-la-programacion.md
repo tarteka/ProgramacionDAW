@@ -491,3 +491,88 @@ genera un archivo html a partir de este tipo de comentarios
 
 > **Para saber más**: Si quieres ir familiarizándote con la información que hay en la web de Oracle, en el siguiente enlace puedes encontrar más información sobre la herramienta Javadoc incluida en el Kit de Desarrollo de Java SE \(en inglés\): [Página oficial de Oracle sobre la herramienta Javadoc](http://download.oracle.com/javase/6/docs/technotes/guides/javadoc/index.html)
 
+## 5. Trabajando con variables
+
+Una vez descritos los elementos básicos de un programa en Java, en este apartado nos vamos a adentrar en su sintaxis, vamos a conocer los tipos de datos con los que trabaja, las operaciones que tienen definidas cada uno de ellos, utilizando ejemplos sencillos que nos muestren la utilidad de todo lo aprendido.
+
+Para ello, vamos a tratar sobre cómo se almacenan y recuperan los datos de variables y cadenas en Java, y cómo se gestionan estos datos desde el punto de vista de la utilización de operadores. Trabajar con datos es fundamental en cualquier programa. Aunque ya hayas programado en este lenguaje, échale un vistazo al contenido del apartado, porque podrás repasar muchos conceptos.
+
+> **Para saber más:**
+>
+> Ahora que vamos a empezar con la sintaxis de Java, quizás te interese tener a mano la documentación que ofrece la página web de Oracle sobre **Java SE**. La plataforma Java SE está formada principalmente por dos productos: el **JDK**, que contiene los **compiladores** y **depuradores** necesarios para programar, y el **JRE**, que proporciona las librerías o bibliotecas y la **JVM**, entre otra serie de componentes.
+>
+> Puedes consultar información de la versión 8 de Java SE, en el siguiente enlace donde puedes encontrar toda la documentación sobre esta tecnología: [Documentación de Oracle sobre Java SE](https://docs.oracle.com/javase/8/)
+>
+> Dentro de la documentación de Oracle sobre Java SE se encuentra el libro “The Java Language Specification”. Este libro está escrito por los inventores del lenguaje, y constituye una referencia técnica casi obligada sobre el mismo. Como mucha de la documentación oficial de Java, se encuentra en inglés: [The Java Language Specification](http://java.sun.com/docs/books/jls/index.html)
+
+### 5.1 Las variables
+
+Un programa maneja datos para hacer cálculos, presentarlos en informes por pantalla o impresora, solicitarlos al usuario, guardarlos en disco, etc. Para poder manejar esos datos, el programa los guarda en variables.  
+ Una **variable** es una zona en la memoria del computador con un valor que puede ser almacenado para ser usado más tarde en el programa. Las variables vienen determinadas por:
+
+* Un nombre, que permite al programa acceder al valor que contiene en memoria. Debe ser un identificador válido.
+* Un **tipo de dato**, que especifica qué clase de información guarda la variable en esa zona de memoria
+* Un rango de valores que puede admitir dicha variable.
+
+Al nombre que le damos a la variable se le llama **identificador**. Los identificadores permiten nombrar los elementos que se están manejando en un programa y como ya hemos visto, hay ciertos aspectos que debemos tener en cuenta al utilizarlos.
+
+#### 5.1.1. Tipos de variables. Constantes I
+
+En un programa nos podemos encontrar distintos tipos de variables. Las diferencias entre una variable y otra dependerán de varios factores, por ejemplo, el tipo de datos que representan, si su valor cambia o no a lo largo de todo el programa, o cuál es el papel que llevan a cabo en el programa. De esta forma, el lenguaje de programación Java define los siguientes tipos de variables:
+
+1. **Variables de tipos primitivos y variables referencia,** según el tipo de información que contengan. En función de a qué grupo pertenezca la variable, tipos primitivos o tipos referenciados, podrá tomar unos valores u otros, y se podrán definir sobre ella unas operaciones u otras.
+2. **Variables y constantes**, dependiendo de si su valor cambia o no durante la ejecución del programa. La definición de cada tipo sería:
+   * Variables. Sirven para almacenar los datos durante la ejecución del programa, pueden estar formadas por cualquier tipo de dato primitivo o referencia. Su valor puede cambiar varias veces a lo largo de todo el programa.
+   * Constantes o variables finales. Son aquellas variables cuyo valor no cambia a lo largo de todo el programa.
+3. **Variables miembro y variables locales**, en función del lugar donde aparezcan en el programa. La definición concreta sería:
+   * Variables miembro. Son las variables que se crean dentro de una **clase**, fuera de cualquier **método**. Pueden ser de tipos primitivos o referencias, variables o constantes.
+   * Variables locales. Son las variables que se crean y usan dentro de un método o, en general, dentro de cualquier bloque de código. La variable deja de existir cuando la ejecución del bloque de código o el método finaliza. Al igual que las variables miembro, las variables locales también pueden ser de tipos primitivos o referencias.
+
+#### Tipos de variables. Constantes II
+
+El siguiente ejemplo muestra el código para la creación de varios tipos de variables. Como ya veremos en apartados posteriores, las variables necesitan declararse, a veces dando un valor y otras con un valor por defecto. Este programa crea una clase que contiene las siguientes variables:
+
+* **Variable constante llamada** **`PI`**: esta variable por haberla declarado como constante no podrá cambiar su valor a lo largo de todo el programa.
+* **Variable miembro llamada** **`x`:** Esta variable pertenece a la clase `ejemplovariables`. La variable x puede almacenar valores del tipo primitivo `int`. El valor de esta variable podrá ser modificado en el programa, normalmente por medio de algún otro método que se cree en la clase.
+* **Variable local llamada** **`valorantiguo`:** Esta variable es local porque está creada dentro del método `obtenerX()`. Sólo se podrá acceder a ella dentro del método donde está creada, ya que fuera de él no existe.
+
+![](.gitbook/assets/prog01_cont_r10_ejemplovariables.jpg)
+
+### 5.2 Los tipos de datos
+
+En los **lenguajes fuertemente tipados**, a todo dato \(constante, variable o expresión\) le corresponde un tipo que es conocido antes de que se ejecute el programa.
+
+El tipo limita el valor de la variable o expresión, las operaciones que se pueden hacer sobre esos valores, y el significado de esas operaciones. Esto es así porque **un tipo de dato no es más que una especificación de los valores que son válidos para esa variable , y de las operaciones que se pueden realizar con ellos.**
+
+Debido a que el tipo de dato de una variable se conoce durante la revisión que hace el compilador para detectar errores, o sea en tiempo de compilación, esta labor es mucho más fácil, ya que no hay que esperar a que se ejecute el programa para saber qué valores va a contener esa variable. Esto se consigue con un control muy exhaustivo de los tipos de datos que se utilizan, lo cual tiene sus ventajas e inconvenientes, por ejemplo cuando se intenta asignar un valor de un tipo, a una variable de otro tipo. Sin embargo, en Java, puede haber conversión entre ciertos tipos de datos, como veremos posteriormente.
+
+Ahora no es el momento de entrar en detalle sobre la conversión de tipos, pero sí debemos conocer con exactitud de qué tipos de datos dispone el lenguaje Java. Ya hemos visto que las variables, según la información que contienen, se pueden dividir en variables de tipos primitivos y variables referencia. Pero ¿qué es un tipo de dato primitivo? ¿Y un tipo referencia? Esto es lo que vamos a ver a continuación. Los tipos de datos en Java se dividen principalmente en dos categorías:
+
+* **Tipos de datos sencillos o primitivos**. Representan valores simples que vienen predefinidos en el lenguaje; contienen valores únicos, como por ejemplo un carácter o un número.
+* **Tipos de datos referencia.** Se definen con un nombre o referencia \(puntero\) que contiene la dirección en memoria de un valor o grupo de valores. Dentro de este tipo tenemos por ejemplo los vectores o arrays, que son una serie de elementos del mismo tipo, o las clases, que son los modelos o plantillas a partir de los cuales se crean los objetos.
+
+#### **5. Tipos de datos primitivos**
+
+Los tipos primitivos son aquéllos datos sencillos que constituyen los tipos de información más habituales: números, caracteres y valores lógicos o booleanos. Al contrario que en otros lenguajes de programación orientados a objetos, **en Java no son objetos**.
+
+Una de las mayores ventajas de tratar con tipos primitivos en lugar de con objetos, es que el compilador de Java puede optimizar mejor su uso. Otra importante característica, es que cada uno de los tipos primitivos tiene **idéntico** tamaño y comportamiento en todas las versiones de Java y para cualquier tipo de ordenador. Esto quiere decir que no debemos preocuparnos de cómo se representarán los datos en distintas plataformas, y asegura la **portabilidad** de los programas, a diferencia de lo que ocurre con otros lenguajes. Por ejemplo, el tipo `int` siempre se representará con 32 bits, con signo, y en el formato de representación **complemento a 2**, en cualquier plataforma que soporte Java.
+
+Hay una peculiaridad en los tipos de datos primitivos, y es que el tipo de dato char es considerado por el compilador como un tipo numérico, ya que los valores que guarda son el código Unicode correspondiente al carácter que representa, no el carácter en sí, por lo que puede operarse con caracteres como si se tratara de números enteros.
+
+Por otra parte, a la hora de elegir el tipo de dato que vamos a utilizar ¿qué criterio seguiremos para elegir un tipo de dato u otro? Pues deberemos tener en cuenta cómo es la información que hay que guardar, si es de tipo texto, numérico, … y, además, qué rango de valores puede alcanzar. En este sentido, hay veces que aunque queramos representar un número sin decimales, tendremos que utilizar datos de tipo real.
+
+Por ejemplo, el tipo de dato `int` no podría representar la población mundial del planeta, ya que el valor máximo que alcanza es de 2.147.483.647, siendo éste el número máximo de combinaciones posibles con 32 bits, teniendo en cuenta que la representación de los números enteros en Java utiliza complemento a 2. Si queremos representar el valor correspondiente a la población mundial del planeta, cerca de 7 mil millones de habitantes, tendríamos que utilizar al menos un tipo de dato `long`, o si tenemos problemas de espacio un tipo `float`. Sin embargo, los tipos reales tienen otro problema: la **precisión**. Vamos a ver más sobre ellos en el siguiente apartado.
+
+| **Tipo** | **Descripción** | **Bytes** | **Rango** | **Valor por default** |
+| :--- | :--- | :--- | :--- | :--- |
+| byte | Entero muy corto | 1 | -128 a 127 | 0 |
+| short | Entero corto | 2 | -32,768 a 32,767 | 0 |
+| int | Entero | 4 | -2,147,483,648 a 2,147,483,647 | 0 |
+| long | Entero largo | 8 | -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807 | 0L |
+| float | Numero con punto flotante de precisión individual con hasta 7 dígitos significativos | 4 | +/-1.4E-45 \(+/-1.4 times 10-45\) a +/-3.4E38 \(+/-3.4 times 1038 | 0.0f |
+| double | Numero con punto flotante de precisión doble con hasta 16 dígitos significativos | 8 | +/-4.9E-324 \(+/-4.9 times 10-324\) a +/-1.7E308 \(+/-1.7 times 10308\) | 0.0d |
+| char | Carácter [Unicode](http://en.wikipedia.org/wiki/Unicode) | 2 | \u0000 a \uFFFF | ‘\u0000’ |
+| boolean | Valor Verdadero o Falso | 1 | true o false | false |
+
+
+
