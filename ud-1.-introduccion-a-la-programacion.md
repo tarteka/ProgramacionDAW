@@ -759,7 +759,7 @@ Otro tipo de operadores aritméticos son los operadores unarios incrementales y 
 
 Operadores incrementales en Java:
 
-| Tipo operador | Expresión Java |  |
+| Tipo operador | Expresión Java |
 | :--- | :--- | :--- |
 | ++ \(incremental\) | Prefija:  x=3;  y=++x;  // x vale 4 e y vale 4 | Postfija:  x=3;  y=x++;  // x vale 4 e y vale 3 |
 | -- \(decremental\) | 5-- // el resultado es 4 |  |
