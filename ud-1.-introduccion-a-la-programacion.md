@@ -904,5 +904,7 @@ En el ejemplo anterior vemos un caso típico de error de tipos, ya que estamos i
 
 > **Debes conocer:**
 >
-> En el siguiente enlace viene información importante sobre cómo se producen las conversiones de tipos en Java, tanto automáticas como explícitas:
+> En el siguiente enlace viene información importante sobre cómo se producen las conversiones de tipos en Java, tanto automáticas como explícitas: [Conversión de Tipos de Datos en Java](anexo-i.-conversion-de-tipos-de-datos-en-java.md)
+
+
 
