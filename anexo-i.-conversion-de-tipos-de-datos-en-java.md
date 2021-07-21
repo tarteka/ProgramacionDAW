@@ -82,13 +82,14 @@ Tabla sobre otras consideraciones con los Tipos de Datos:
       <td style="text-align:left">
         <p>Para convertir cadenas de texto a otros tipos de datos se utilizan las
           siguientes funciones:</p>
+        <p>```java</p>
         <p>num=Byte.parseByte(cad):</p>
         <p>num=Short.parseShort(cad);</p>
         <p>num=Integer.parseInt(cad);</p>
         <p>num=Long.parseLong(cad);</p>
         <p>num=Float.parseFloat(cad);</p>
         <p>num=Double.parseDouble(cad);</p>
-        <p></p>
+        <p>```</p>
         <p>Por ejemplo, si hemos le&#xED;do de teclado un n&#xFA;mero que est&#xE1;
           almacenado en una variable de tipo <code>String</code> llamada <code>cadena</code>,
           y lo queremos convertir al tipo de datos <code>byte</code>, har&#xED;amos
