@@ -906,5 +906,129 @@ En el ejemplo anterior vemos un caso típico de error de tipos, ya que estamos i
 >
 > En el siguiente enlace viene información importante sobre cómo se producen las conversiones de tipos en Java, tanto automáticas como explícitas: [Conversión de Tipos de Datos en Java](anexo-i.-conversion-de-tipos-de-datos-en-java.md)
 
+## 6. Estructuras de repetición
 
+Nuestros programas ya son capaces de operar con datos de tipo entero y real, pero aún hemos de aprender un conjunto de estructuras que nos permita repetir una secuencia de instrucciones determinada. La función de estas estructuras es repetir la ejecución de una serie de instrucciones teniendo en cuenta una condición.
+
+A este tipo de estructuras se las denomina **estructuras de repetición**, estructuras repetitivas, **bucles** o estructuras **iterativas**. En Java existen cuatro clases de bucles:
+
+* Bucle `for` \(repite para\)
+* Bucle `for/in` \(repite para cada\)
+* Bucle `While` \(repite mientras\)
+* Bucle `Do While` \(repite hasta\)
+
+Los bucles `for` y `for/in` se consideran bucles **controlados por contador**. Por el contrario, los bucles `while` y `do...while` se consideran bucles **controlados por sucesos.**
+
+La utilización de unos bucles u otros para solucionar un problema dependerá en gran medida de las siguientes preguntas:
+
+* ¿Sabemos **a priori** cuántas veces necesitamos repetir un conjunto de instrucciones?
+* ¿Sabemos si hemos de repetir un conjunto de instrucciones si una condición satisface un conjunto de valores?
+* ¿Sabemos hasta cuándo debemos estar repitiendo un conjunto de instrucciones?
+* ¿Sabemos si hemos de estar repitiendo un conjunto de instrucciones mientras se cumpla una condición?
+
+En esta UD nos vamos a centrar en los bucles `for`, dejando el resto para UDs posteriores.
+
+### 6.2 Estructuras FOR
+
+Hemos indicado anteriormente que el bucle `for` es un bucle controlado por contador. Este tipo de bucle tiene las siguientes características:
+
+* Se ejecuta un número determinado de veces.
+* Utiliza una variable contadora que controla las iteraciones del bucle.
+
+En general, existen tres operaciones que se llevan a cabo en este tipo de bucles:
+
+* Se inicializa la variable contadora.
+* Se evalúa el valor de la variable contador, por medio de una comparación de su valor con el número de iteraciones especificado.
+* Se modifica o actualiza el valor del contador a través de incrementos o decrementos de éste, en cada una de las iteraciones.
+
+![](.gitbook/assets/prog01_cont_r05_diagramafor.jpg)
+
+> **Recomendación:**
+>
+> La inicialización de la variable contadora debe realizase correctamente para garantizar que el bucle se lleve a cabo, al menos, la primera repetición de su código interno.
+>
+> La condición de terminación del bucle debe variar en el interior del mismo, de no ser así, podemos caer en la creación de un bucle infinito. Cuestión que se debe evitar por todos los medios.
+>
+> Es necesario estudiar el número de veces que se repite el bucle, pues debe ajustarse al número de veces estipulado.
+
+**Sintaxis:**
+
+```java
+for (inicialización; condición; iteración)
+{
+    sentencia1;
+    sentencia2;
+    ...
+    sentenciaN;
+}
+```
+
+* _Inicialización_ es una expresión en la que se inicializa una variable de control, que será la encargada de controlar el final del bucle.
+* _Condición_ es una expresión que evaluará la variable de control. Mientras la condición se cumpla, el cuerpo del bucle estará repitiéndose. Cuando la condición sea falsa, terminará la ejecución del bucle.
+* _Iteración_ indica la manera en la que la variable de control va cambiando en cada iteración del bucle. Podrá ser mediante incremento o decremento, y no solo de uno en uno.
+
+```java
+public class repetitiva_for {
+     /* En este ejemplo se utiliza la estructura repetitiva for
+     * para representar en pantalla la tabla de multiplicar del siete 
+     */
+    public static void main(String[] args) {
+        // Declaración e inicialización de variables
+        int numero = 7;
+        int contador;
+        int resultado=0;
+        
+        //Salida de información
+        System.out.println ("Tabla de multiplicar del " + numero);
+        System.out.println (".............................. ");
+        
+        //Utilizamos ahora el bucle for
+        for (contador=1; contador<=10; contador++)
+        /* La cabecera del bucle incorpora la inicialización de la variable
+         * de control, la condición de multiplicación hasta el 10 y el
+         * incremento de dicha variable de uno en uno en cada iteración del
+         * bucle. 
+         * En este caso contador++ incrementará en una unidad el valor de 
+         * dicha variable.
+         */
+            
+        {
+            resultado = contador * numero; 
+            System.out.println(numero + " x " + contador + " = " + resultado);
+            /* A través del operador + aplicado a cadenas de caracteres, 
+             * concatenamos los valores de las variables con las cadenas de
+             * caracteres que necesitamos para representar correctamente la
+             * salida de cada multiplicación.
+             */
+        }
+    }    
+}
+```
+
+## 7. Descomposición de programas
+
+Cuando nos enfrentarnos a un problema, conviene dividirlo en partes más manejables y sencillas de crear y mantener. De este modo además, conseguiremos programas más estructurados y comprensibles, y evitaremos la redundancia de código en nuestras aplicaciones.
+
+Para ello, Java proporciona los métodos. Estos permiten agrupar un conjunto de instrucciones que realizan una determinada tarea e identificarlas mediante un nombre. De esta manera, podemos crear un método y luego utilizarlo todas las veces que queramos mediante su identificador.
+
+Para poder trabajar con métodos, primero tendremos que **declarar** el método:
+
+```text
+public static void identificadoMetodo() {
+    sentencia 1;
+    sentencia 2;
+    ...
+    sentencia N;
+}
+```
+
+Y luego realizar **llamadas** a él donde los queramos utilizar:
+
+```text
+identificadorMetodo();
+```
+
+> Por ahora, hasta saber más sobre los métodos, los vamos a declarar **todos como** **public static void** y los vamos a utilizar para descomponer y estructurar programas.
+>
+> Más adelante, iremos viendo otras características de los métodos.
 

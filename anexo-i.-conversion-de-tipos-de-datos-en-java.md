@@ -57,11 +57,11 @@ Tabla sobre otras consideraciones con los Tipos de Datos:
         <p><b>+ Math.floor(num):</b> Entero mayor, que sea inferior o igual a num.</p>
         <p>double num=3.5.</p>
         <p></p>
-        <p><code>x=Math.round(num);    //  x = 4</code>
+        <p><code>x=Math.round(num); //  x = 4</code>
         </p>
-        <p><code>y=Math.ceil(num);        // y = 4</code>
+        <p><code>y=Math.ceil(num); // y = 4</code>
         </p>
-        <p><code>z=Math.floor(num);      //  z = 3</code>
+        <p><code>z=Math.floor(num); //  z = 3</code>
         </p>
       </td>
       <td style="text-align:left">
@@ -76,11 +76,11 @@ Tabla sobre otras consideraciones con los Tipos de Datos:
         <p><code>char c;</code>
         </p>
         <p>&lt;code&gt;&lt;/code&gt;</p>
-        <p><code>num = (int) &#x2018;A&#x2019;;             //num = 65</code>
+        <p><code>num = (int) &#x2018;A&#x2019;; //num = 65</code>
         </p>
-        <p><code>c = (char) 65;               // c = &#x2018;A&#x2019; </code>
+        <p><code>c = (char) 65; // c = &#x2018;A&#x2019; </code>
         </p>
-        <p><code>c = (char) ((int) &#x2018;A&#x2019; + 1);  //c = &#x2019;B&#x2019;</code>
+        <p><code>c = (char) ((int) &#x2018;A&#x2019; + 1); //c = &#x2019;B&#x2019;</code>
         </p>
       </td>
       <td style="text-align:left">
