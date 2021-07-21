@@ -14,9 +14,9 @@ Por último, estudiaremos la técnica de descomposición y aprenderemos cómo di
 
 | En la vida real... | En programación... |
 | :--- | :--- |
-| Observación de la situación o problema. |  **Análisis del problema:** requiere que el problema sea definido y comprendido claramente para que pueda ser analizado con todo detalle. |
-| Pensamos en una o varias posibles soluciones. |  **Diseño o desarrollo de algoritmos:** procedimiento paso a paso para solucionar el problema dado. |
-| Aplicamos la solución que estimamos más adecuada. |  **Resolución del algoritmo elegido en la computadora:** consiste en convertir el algoritmo en programa, ejecutarlo y comprobar que soluciona verdaderamente el problema. |
+| Observación de la situación o problema. | **Análisis del problema:** requiere que el problema sea definido y comprendido claramente para que pueda ser analizado con todo detalle. |
+| Pensamos en una o varias posibles soluciones. | **Diseño o desarrollo de algoritmos:** procedimiento paso a paso para solucionar el problema dado. |
+| Aplicamos la solución que estimamos más adecuada. | **Resolución del algoritmo elegido en la computadora:** consiste en convertir el algoritmo en programa, ejecutarlo y comprobar que soluciona verdaderamente el problema. |
 
 ¿Qué virtudes debería tener nuestra solución?
 
@@ -75,7 +75,7 @@ Este es el lenguaje utilizado directamente por el procesador, consta de un conju
 
 Este fue el primer lenguaje utilizado para la programación de computadores. De hecho, cada máquina tenía su propio conjunto de instrucciones codificadas en ceros y unos. Cuando un algoritmo está escrito en este tipo de lenguaje, decimos que está en código máquina.
 
- Programar en este tipo de lenguaje presentaba los siguientes inconvenientes:
+Programar en este tipo de lenguaje presentaba los siguientes inconvenientes:
 
 * Cada programa era válido sólo para un tipo de procesador u ordenador.
 * La lectura o interpretación de los programas era extremadamente difícil y, por tanto, insertar modificaciones resultaba muy costoso.
@@ -198,7 +198,7 @@ Para el desarrollo de programas en lenguaje Java es necesario utilizar un entorn
 * Un conjunto de herramientas para el desarrollo de programas, como es el compilador de bytecodes, el generador de documentación, un depurador, etc.
 * Un entorno de ejecución que en definitiva es una máquina virtual que ejecuta los programas traducidos a bytecodes.
 
-El siguiente esquema muestra los elementos fundamentales de la plataforma de desarrollo Java 2.  
+El siguiente esquema muestra los elementos fundamentales de la plataforma de desarrollo Java 2.
 
 ![](.gitbook/assets/prog01_cont_r13_elementos_plataforma_java2.png)
 
@@ -210,7 +210,7 @@ Actualmente hay tres ediciones de la plataforma Java 2:
 
 > **Para saber más**
 >
-> Si deseas conocer más sobre los orígenes del lenguaje Java, aquí te ofrecemos más información: 
+> Si deseas conocer más sobre los orígenes del lenguaje Java, aquí te ofrecemos más información:
 >
 > * [Historia de Java](http://es.wikipedia.org/wiki/Java_%28lenguaje_de_programaci%C3%B3n%29#Historia)
 > * [Línea de tiempo de la historia de Java](https://www.timetoast.com/timelines/evolution-of-the-smart-car)
@@ -221,7 +221,7 @@ Existen dos características que distinguen a **Java** de otros lenguajes, como 
 
 Estas características las vamos a explicar a continuación:
 
-1.  **Independencia:** Los programas escritos en Java pueden ser ejecutados en cualquier tipo de hardware. El código fuente es compilado, generándose el código conocido como **Java Bytecode** \(instrucciones máquina simplificadas que son específicas de la plataforma Java\), el bytecode será interpretado y ejecutado en la **Máquina Virtual** **Java \(MVJ o JVM – Java Virtual Machine\)** que es un programa escrito en código nativo de la plataforma destino entendible por el hardware. Con esto se evita tener que realizar un programa diferente para cada CPU o plataforma.
+1. **Independencia:** Los programas escritos en Java pueden ser ejecutados en cualquier tipo de hardware. El código fuente es compilado, generándose el código conocido como **Java Bytecode** \(instrucciones máquina simplificadas que son específicas de la plataforma Java\), el bytecode será interpretado y ejecutado en la **Máquina Virtual** **Java \(MVJ o JVM – Java Virtual Machine\)** que es un programa escrito en código nativo de la plataforma destino entendible por el hardware. Con esto se evita tener que realizar un programa diferente para cada CPU o plataforma.
 
    Por tanto, la parte que realmente es dependiente del sistema es la Máquina Virtual Java, así como las librerías o bibliotecas básicas que permiten acceder directamente al hardware de la máquina.
 
@@ -231,7 +231,7 @@ Estas características las vamos a explicar a continuación:
 
 Junto a las características diferenciadoras del lenguaje Java relacionadas con la independencia y el trabajo en red, han de destacarse dos virtudes que hacen a este lenguaje uno de los más extendidos entre la comunidad de programadores: su seguridad y su simplicidad.
 
-1.  **Seguridad:** En primer lugar, los posibles accesos a zonas de memoria “sensibles” que en otros lenguajes como C y C++ podían suponer peligros importantes, se han eliminado en Java.
+1. **Seguridad:** En primer lugar, los posibles accesos a zonas de memoria “sensibles” que en otros lenguajes como C y C++ podían suponer peligros importantes, se han eliminado en Java.
 
    En segundo lugar, el código Java es comprobado y verificado para evitar que determinadas secciones del código produzcan efectos no deseados. Los test que se aplican garantizan que las operaciones, operandos, conversiones, uso de clases y demás acciones son seguras.
 
@@ -239,7 +239,7 @@ Junto a las características diferenciadoras del lenguaje Java relacionadas con 
 
    En definitiva, podemos afirmar que Java es un lenguaje seguro.
 
-2.  **Simplicidad:** Aunque Java es tan potente como C o C++, es bastante más sencillo. Posee una curva de aprendizaje muy rápida y, para alguien que comienza a programar en este lenguaje, le resulta relativamente fácil comenzar a escribir aplicaciones interesantes.
+2. **Simplicidad:** Aunque Java es tan potente como C o C++, es bastante más sencillo. Posee una curva de aprendizaje muy rápida y, para alguien que comienza a programar en este lenguaje, le resulta relativamente fácil comenzar a escribir aplicaciones interesantes.
 
    Si has programado alguna vez en C o C++ encontrarás que Java te pone las cosas más fáciles, ya que se han eliminado: la aritmética de **punteros**, los registros, la definición de tipos, la gestión de memoria, etc. Con esta simplificación se reduce bastante la posibilidad de cometer errores comunes en los programas. Un programador experimentado en C o C++ puede cambiar a este lenguaje rápidamente y obtener resultados en muy poco espacio de tiempo.
 
@@ -249,7 +249,7 @@ Junto a las características diferenciadoras del lenguaje Java relacionadas con 
 
 #### 2.4.5 Java y los Bytecodes
 
-Un programa escrito en Java no es directamente ejecutable, es necesario que el código fuente sea interpretado por la Maquina Virtual Java. ¿Cuáles son los pasos que se siguen desde que se genera el código fuente hasta que se ejecuta? A continuación se detallan cada uno de ellos.  
+Un programa escrito en Java no es directamente ejecutable, es necesario que el código fuente sea interpretado por la Maquina Virtual Java. ¿Cuáles son los pasos que se siguen desde que se genera el código fuente hasta que se ejecuta? A continuación se detallan cada uno de ellos.
 
 ![](.gitbook/assets/prog01_cont_r16_programas_en_java.png)
 
@@ -275,19 +275,19 @@ La versatilidad del lenguaje de programación Java permite al programador crear 
   * Son programas independientes al igual que los creados con los lenguajes tradicionales.
   * Se componen como mínimo de un archivo `.class` que debe contar necesariamente con el método `main`.
   * No necesitan un navegador web y se ejecutan cuando invocamos el comando Java para iniciar la Máquina Virtual de Java \(JVM\). De no encontrarse el método `main` la aplicación no podrá ejecutarse.
-  *  Las aplicaciones de consola leen y escriben hacia y desde la entrada y salida estándar, sin ninguna interfaz gráfica de usuario.
+  * Las aplicaciones de consola leen y escriben hacia y desde la entrada y salida estándar, sin ninguna interfaz gráfica de usuario.
 * **Aplicaciones gráficas:**
   * Aquellas que utilizan las clases con capacidades gráficas, como Swing que es la biblioteca para la interfaz gráfica de usuario avanzada de la plataforma Java SE.
-  *  Incluyen las instrucciones `import`, que indican al compilador de Java que las clases del paquete `Javax.swing` se incluyan en la compilación.
+  * Incluyen las instrucciones `import`, que indican al compilador de Java que las clases del paquete `Javax.swing` se incluyan en la compilación.
 * **Applets:**
   * Son programas incrustados en otras aplicaciones, normalmente una página web que se muestra en un navegador. Cuando el navegador carga una web que contiene un applet, éste se descarga en el navegador web y comienza a ejecutarse. Esto nos permite crear programas que cualquier usuario puede ejecutar con tan solo cargar la página web en su navegador.
   * Se pueden descargar de Internet y se observan en un navegador. Los applets se descargan junto con una página HTML desde un servidor web y se ejecutan en la máquina cliente.
   * No tienen acceso a partes sensibles \(por ejemplo: no pueden escribir archivos\), a menos que uno mismo le dé los permisos necesarios en el sistema.
   * No tienen un método principal.
-  *  Son multiplataforma y pueden ejecutarse en cualquier navegador que soporte Java.
+  * Son multiplataforma y pueden ejecutarse en cualquier navegador que soporte Java.
 * **Servlets:**
   * Son componentes de la parte del servidor de Java EE, encargados de generar respuestas a las peticiones recibidas de los clientes.
-  *  Los servlets, al contrario de los applets, son programas que están pensados para trabajar en el lado del servidor y desarrollar aplicaciones Web que interactúen con los clientes.
+  * Los servlets, al contrario de los applets, son programas que están pensados para trabajar en el lado del servidor y desarrollar aplicaciones Web que interactúen con los clientes.
 * **Midlets:**
   * Son aplicaciones creadas en Java para su ejecución en sistemas de propósito simple o dispositivos móviles. Los juegos Java creados para teléfonos móviles son midlets.
   * Son programas creados para dispositivos embebidos \(se dedican a una sola actividad\), más específicamente para la máquina virtual Java MicroEdition \(Java ME\).
@@ -326,15 +326,15 @@ Entre los que son propietarios o de pago tenemos:
 
 ![Comparativa entornos para Java](.gitbook/assets/comparativa-ides-java.png)
 
-Pero, ¿cuál o cuáles son los más utilizados por la comunidad de programadores Java? El puesto de honor se lo disputan entre **Eclipse, NetBeans** y IntelliJ IDEA. Los dos primeros son gratuitos, con soporte de idiomas y multiplataforma \(Windows, Linux, MacOS\).  
-  
+Pero, ¿cuál o cuáles son los más utilizados por la comunidad de programadores Java? El puesto de honor se lo disputan entre **Eclipse, NetBeans** y IntelliJ IDEA. Los dos primeros son gratuitos, con soporte de idiomas y multiplataforma \(Windows, Linux, MacOS\).
+
 ¿Y cuál será con el que vamos a trabajar? Pues aunque parezca mentira, ninguno de ellos. Vamos a utilizar [**jGRASP**](http://www.jgrasp.org/index.html) , un entorno de desarrollo ligero, creado por la Universidad de Auburn para mejorar la comprensión del software y facilitar el aprendizaje de la programación. Está desarrollado en Java y funciona con Windows, Linux y MacOS sobre máquinas virtuales de Java.
 
 ### **3.3 El entorno jGRASP**
 
 jGRASP es un entorno de desarrollo ligero que ha sido específicamente creado para proporcionar herramientas de visualización de software que facilitan la conprensión del código a programadores principiantes.
 
-En concreto proporciona 3 herramientas principales de visualización: 
+En concreto proporciona 3 herramientas principales de visualización:
 
 * Diagramas de estructuras de control para visualización de código fuente
 * Diagramas de clases UML para visualizar la arquitectura de proyectos
@@ -344,7 +344,7 @@ Así mismo, incluye un entorno de trabajo innovador, un debugger y la ventana "I
 
 Ha sido desarrollado en Java por la Universidad de Auburn, por lo que funciona en cualquier plataforma que tenga la máquina virtual de Java instalada. La página oficial de Java proporciona descargas para Windows, Mac OS y Linux.
 
-Soporta  Java,  C,  C++,  Objective-C,  Python,  Ada,  y VHDL. Por ello, no es un IDE profesional sino un IDE pensado para estudiantes que están aprendiendo a programar.  La mayoría de sus funcionalidad se orientan a facilitar la comprensión del funcionamiento del código y no a facilitar la generación de código.
+Soporta Java, C, C++, Objective-C, Python, Ada, y VHDL. Por ello, no es un IDE profesional sino un IDE pensado para estudiantes que están aprendiendo a programar. La mayoría de sus funcionalidad se orientan a facilitar la comprensión del funcionamiento del código y no a facilitar la generación de código.
 
 ## 4. Mi primer programa en Java
 
@@ -364,7 +364,7 @@ Vamos a analizar cada uno de los elementos que aparecen en dicho gráfico:
 * **public static void main \(String\[\] args\)**: Es el método que representa al programa principal, en él se podrán incluir las instrucciones que estimemos oportunas para la ejecución del programa. Desde él se podrá hacer uso del resto de clases creadas. Todos los programas Java tienen un método `main`.
 * **Comentarios**: los comentarios se suelen incluir en el código fuente para realizar aclaraciones, anotaciones o cualquier otra indicación que el programador estime oportuna. Estos comentarios pueden introducirse de dos formas, **con** `//` y **con** `/* */`. Con la primera forma estaríamos estableciendo una única línea completa de comentario y, con la segunda, con `/*` comenzaríamos el comentario y éste no terminaría hasta que no insertáramos `*/`.
 * **Bloques de código**: son conjuntos de instrucciones que se marcan mediante la apertura y cierre de llaves `{ }`. El código así marcado es considerado interno al bloque.
-* **Punto y coma**: aunque en el ejemplo no hemos incluido ninguna línea de código que termine con punto y coma, hay que hacer hincapié en que cada línea de código ha de terminar con punto y coma \(`;`\). En caso de no hacerlo, tendremos errores sintácticos. ****
+* **Punto y coma**: aunque en el ejemplo no hemos incluido ninguna línea de código que termine con punto y coma, hay que hacer hincapié en que cada línea de código ha de terminar con punto y coma \(`;`\). En caso de no hacerlo, tendremos errores sintácticos. _\*\*_
 
 > **Recomendación:**
 >
@@ -378,7 +378,7 @@ Los identificadores permiten nombrar los elementos que se están manejando en un
 
 #### 4.2.1 Identificadores
 
-Un **identificador** en Java es una secuencia ilimitada sin espacios de letras y dígitos **Unicode**, de forma que **el primer símbolo de la secuencia debe ser una letra, un símbolo de subrayado \(\_\) o el símbolo dólar \($\)**. Por ejemplo, son válidos los siguientes identificadores:  
+Un **identificador** en Java es una secuencia ilimitada sin espacios de letras y dígitos **Unicode**, de forma que **el primer símbolo de la secuencia debe ser una letra, un símbolo de subrayado \(\_\) o el símbolo dólar \($\)**. Por ejemplo, son válidos los siguientes identificadores:
 
 ```text
 $x5      ατη    NUM_MAX    _numCuenta
@@ -414,7 +414,7 @@ Además de estas restricciones, en la siguiente tabla puedes ver otras convencio
 
 Las palabras reservadas, a veces también llamadas palabras clave o keywords , son secuencias de caracteres formadas con letras ASCII cuyo uso se reserva al lenguaje y, por tanto, **no pueden utilizarse para crear identificadores.**
 
- Las palabras reservadas en Java son:
+Las palabras reservadas en Java son:
 
 |  |  |  |  |  |
 | :--- | :--- | :--- | :--- | :--- |
@@ -435,7 +435,7 @@ Hay palabras reservadas que no se utilizan en la actualidad, como es el caso de 
 
 ### 4.3 Salida por pantalla
 
-La salida por pantalla en Java se hace con el objeto `System.out`. Este objeto es una instancia de la clase `PrintStream` del paquete `java.lang`. Si miramos la API de `PrintStream` obtendremos la variedad de métodos para mostrar datos por pantalla, algunos de estos son:  
+La salida por pantalla en Java se hace con el objeto `System.out`. Este objeto es una instancia de la clase `PrintStream` del paquete `java.lang`. Si miramos la API de `PrintStream` obtendremos la variedad de métodos para mostrar datos por pantalla, algunos de estos son:
 
 ![clase PrintStream](.gitbook/assets/prog01_cont_r56_printstream.png)
 
@@ -488,7 +488,7 @@ genera un archivo html a partir de este tipo de comentarios
 ```
 
 > **Reflexiona**: Una buena práctica de programación es añadir en la última llave que delimita cada bloque de código, un comentario indicando a qué clase o método pertenece esa llave.
-
+>
 > **Para saber más**: Si quieres ir familiarizándote con la información que hay en la web de Oracle, en el siguiente enlace puedes encontrar más información sobre la herramienta Javadoc incluida en el Kit de Desarrollo de Java SE \(en inglés\): [Página oficial de Oracle sobre la herramienta Javadoc](http://download.oracle.com/javase/6/docs/technotes/guides/javadoc/index.html)
 
 ## 5. Trabajando con variables
@@ -508,7 +508,7 @@ Para ello, vamos a tratar sobre cómo se almacenan y recuperan los datos de vari
 ### 5.1 Las variables
 
 Un programa maneja datos para hacer cálculos, presentarlos en informes por pantalla o impresora, solicitarlos al usuario, guardarlos en disco, etc. Para poder manejar esos datos, el programa los guarda en variables.  
- Una **variable** es una zona en la memoria del computador con un valor que puede ser almacenado para ser usado más tarde en el programa. Las variables vienen determinadas por:
+Una **variable** es una zona en la memoria del computador con un valor que puede ser almacenado para ser usado más tarde en el programa. Las variables vienen determinadas por:
 
 * Un nombre, que permite al programa acceder al valor que contiene en memoria. Debe ser un identificador válido.
 * Un **tipo de dato**, que especifica qué clase de información guarda la variable en esa zona de memoria
@@ -592,7 +592,7 @@ En concreto, sólo se almacena la **mantisa** y el exponente al que va elevada l
 En Java las variables de tipo `float` se emplean para representar los números en coma flotante de simple precisión de 32 bits, de los cuales 24 son para la mantisa y 8 para el exponente. La mantisa es un valor entre -1.0 y 1.0 y el exponente representa la potencia de 2 necesaria para obtener el valor que se quiere representar. Por su parte, las variables tipo `double` representan los números en coma flotante de doble precisión de 64 bits, de los cuales 53 son para la mantisa y 11 para el exponente.
 
 > La mayoría de los programadores en Java emplean el tipo `double` cuando trabajan con datos de tipo real, es una forma de asegurarse de que los errores cometidos por las sucesivas aproximaciones sean menores. De hecho, Java considera los valores en coma flotante como de tipo `double` por defecto. Con el objetivo de conseguir la máxima portabilidad de los programas, Java utiliza el estándar internacional **IEEE 754** para la representación interna de los números en coma flotante, que es una forma de asegurarse de que el resultado de los cálculos sea el mismo para diferentes plataformas.
-
+>
 > **Para saber más:** La siguiente página es la web oficial sobre el estándar internacional IEEE 754-2008 para representación de números en coma flotante \(en inglés\): [Notación IEEE 754](https://es.wikipedia.org/wiki/IEEE_coma_flotante)
 
 **5.2.1.2 Literales de los tipos primitivos**
@@ -601,7 +601,7 @@ Un **literal**, **valor literal** o **constante literal** es un valor concreto p
 
 Los **literales booleanos** tienen dos únicos valores que puede aceptar el tipo: `true` y `false`. Por ejemplo, con la instrucción `boolean encontrado = true;` estamos declarando una variable de tipo booleana a la cual le asignamos el valor literal `true`.
 
- Los **literales enteros** se pueden representar en tres notaciones:
+Los **literales enteros** se pueden representar en tres notaciones:
 
 * **Decimal**: por ejemplo `20`. Es la forma más común.
 * **Octal**: por ejemplo `024`. Un número en octal siempre empieza por cero, seguido de dígitos octales \(del 0 al 7\).
@@ -622,7 +622,7 @@ Un **literal carácter** puede escribirse como un carácter entre comillas simpl
 
 **Normalmente, los objetos en Java deben ser creados con la orden `new`. Sin embargo, los literales String no lo necesitan ya que son objetos que se crean implícitamente por Java.**
 
- Los **literales de cadenas de caracteres** se indican entre comillas dobles. En el ejemplo anterior “`El primer programa`” es un literal de tipo cadena de caracteres. Al construir una cadena de caracteres se puede incluir cualquier carácter Unicode excepto un carácter de retorno de carro, por ejemplo en la siguiente instrucción utilizamos la secuencia de escape \’’ para escribir dobles comillas dentro del mensaje:
+Los **literales de cadenas de caracteres** se indican entre comillas dobles. En el ejemplo anterior “`El primer programa`” es un literal de tipo cadena de caracteres. Al construir una cadena de caracteres se puede incluir cualquier carácter Unicode excepto un carácter de retorno de carro, por ejemplo en la siguiente instrucción utilizamos la secuencia de escape \’’ para escribir dobles comillas dentro del mensaje:
 
 ```text
 String texto = "Juan dijo: \"Hoy hace un día fantástico…\"";
@@ -638,7 +638,7 @@ Las variables se pueden declarar en cualquier bloque de código, dentro de llave
 
 ```text
 int numAlumnos = 15;
-double radio = 3.14, importe = 102.95; 
+double radio = 3.14, importe = 102.95;
 ```
 
 De esta forma, estamos declarando `numAlumnos` como una variable de tipo `int`, y otras dos variables `radio` e `importe` de tipo double. Aunque no es obligatorio, hemos aprovechado la declaración de las variables para inicializarlas a los valores 15, 3.14 y 102.95 respectivamente.
@@ -693,7 +693,7 @@ Los **tipos de datos enumerados** son una forma de declarar una variable con un 
 
 La forma de declararlos es con la palabra reservada `enum`, seguida del nombre de la variable y la lista de valores que puede tomar entre llaves. A los valores que se colocan dentro de las llaves se les considera como constantes, van separados por comas y deben ser valores únicos.
 
- La lista de valores se coloca entre llaves, porque un tipo de datos `enum` no es otra cosa que una especie de clase en Java, y todas las clases llevan su contenido entre llaves.
+La lista de valores se coloca entre llaves, porque un tipo de datos `enum` no es otra cosa que una especie de clase en Java, y todas las clases llevan su contenido entre llaves.
 
 Al considerar Java este tipo de datos como si de una clase se tratara, no sólo podemos definir los valores de un tipo enumerado, sino que también podemos definir operaciones a realizar con él y otro tipo de elementos, lo que hace que este tipo de dato sea más versátil y potente que en otros lenguajes de programación.
 
@@ -712,7 +712,7 @@ Los **operadores** llevan a cabo operaciones sobre un conjunto de datos u operan
 Los operadores se combinan con los literales y/o identificadores para formar expresiones. Una **expresión** es una combinación de operadores y operandos que se evalúa produciendo un único resultado de un tipo determinado.
 
 El resultado de una expresión puede ser usado como parte de otra expresión o en una sentencia o instrucción. Las expresiones, combinadas con algunas palabras reservadas o por sí mismas, forman las llamadas **sentencias** o **instrucciones**.  
- Por ejemplo, pensemos en la siguiente expresión Java:
+Por ejemplo, pensemos en la siguiente expresión Java:
 
 ```text
 i + 1
@@ -759,10 +759,35 @@ Otro tipo de operadores aritméticos son los operadores unarios incrementales y 
 
 Operadores incrementales en Java:
 
-| Tipo operador | Expresión Java |
-| :--- | :--- | :--- |
-| ++ \(incremental\) | Prefija:  x=3;  y=++x;  // x vale 4 e y vale 4 | Postfija:  x=3;  y=x++;  // x vale 4 e y vale 3 |
-| -- \(decremental\) | 5-- // el resultado es 4 |  |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Tipo operador</th>
+      <th style="text-align:left">Expresi&#xF3;n Java</th>
+      <th style="text-align:left"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">++ (incremental)</td>
+      <td style="text-align:left">
+        <p>Prefija:</p>
+        <p>x=3;</p>
+        <p>y=++x; // x vale 4 e y vale 4</p>
+      </td>
+      <td style="text-align:left">
+        <p>Postfija:</p>
+        <p>x=3;</p>
+        <p>y=x++; // x vale 4 e y vale 3</p>
+      </td>
+    </tr>
+    <tr>
+      <td style="text-align:left">-- (decremental)</td>
+      <td style="text-align:left">5-- // el resultado es 4</td>
+      <td style="text-align:left"></td>
+    </tr>
+  </tbody>
+</table>
 
 ![](.gitbook/assets/prog01_cont_r25_operadoresaritmeticos.jpg)
 
