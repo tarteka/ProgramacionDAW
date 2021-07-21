@@ -791,3 +791,118 @@ Operadores incrementales en Java:
 
 ![](.gitbook/assets/prog01_cont_r25_operadoresaritmeticos.jpg)
 
+En el ejemplo vemos un programa básico que utiliza operadores aritméticos. Observa que usamos `System.out.printf` para mostrar por pantalla un texto formateado. El texto entre dobles comillas son los argumentos del método `printf` y si usamos más de uno, se separan con comas. Primero indicamos cómo queremos que salga el texto, y después el texto que queremos mostrar. Fíjate que con el primer `%s` nos estamos refiriendo a una variable de tipo `String`, o sea, a la primera cadena de texto, con el siguiente `%s` a la segunda cadena y con el último `%s` a la tercena. Con `%f` nos referimos a un argumento de tipo float, etc.
+
+#### 5.3.2 Operadores de asignación
+
+El principal operador de esta categoría es el operador asignación `“=”,` que permite al programa darle un valor a una variable, y ya hemos utilizado varias ocasiones en esta unidad. Además de este operador, Java proporciona otros operadores de asignación combinados con los operadores aritméticos, que permiten abreviar o reducir ciertas expresiones.
+
+Por ejemplo, el operador `“+=”` suma el valor de la expresión a la derecha del operador con el valor de la variable que hay a la izquierda del operador, y almacena el resultado en dicha variable. En la siguiente tabla se muestran todos los operadores de asignación compuestos que podemos utilizar en Java.
+
+Operaciones de asignación combinados en Java:
+
+| Operador | Ejemplo en Java | Expresión equivalente |
+| :--- | :--- | :--- |
+| `+=` | `op1 += op2` | `op1 = op1 + op2` |
+| `-=` | `op1 -= op2` | `op1 = op1 - op2` |
+| `*=` | `op1 *= op2` | `op1 = op1 * op2` |
+| `/=` | `op1 /= op2` | `op1 = op1 / op2` |
+| `%=` | `op1 %= op2` | `op1 = op1 % op2` |
+
+Un ejemplo de operadores de asignación combinados lo tenemos a continuación:
+
+![](.gitbook/assets/prog01_cont_r27_ejemplocombinados.jpg)
+
+#### 5.3.3 Operaciones de relación
+
+Los operadores relacionales se utilizan para comparar datos de tipo primitivo \(numérico, carácter y booleano\). El resultado se utilizará en otras expresiones o sentencias, que ejecutarán una acción u otra en función de si se cumple o no la relación.
+
+Estas expresiones en Java dan siempre como resultado un valor booleano true o false. En la tabla siguiente aparecen los operadores relacionales en Java.
+
+Operaciones relacionales en Java:
+
+| Operador | Ejemplo en Java | Significado |
+| :--- | :--- | :--- |
+| `==` | `op1 == op2` | op1 igual a op2 |
+| `!=` | `op1 != op2` | op1 distinto de op2 |
+| `>` | `op1 > op2` | op1 mayor que op2 |
+| `<` | `op1 < op2` | op1 menor que op2 |
+| `>=` | `op1 >= op2` | op1 mayor o igual que op2 |
+| `<=` | `op1 <= op2` | op1 menor o igual que op2 |
+
+Hasta ahora hemos visto ejemplos que creaban variables y se inicializaban con algún valor. Pero ¿y si lo que queremos es que el usuario introduzca un valor al programa? Entonces debemos agregarle interactividad a nuestro programa, por ejemplo utilizando la clase `Scanner`. Aunque no hemos visto todavía qué son las clases y los objetos, de momento vamos a pensar que la clase `Scanner` nos va a permitir leer los datos que se escriben por teclado, y que para usarla es necesario importar el paquete de clases que la contiene. El código del ejemplo lo tienes a continuación. El programa se quedará esperando a que el usuario escriba algo en el teclado y pulse la tecla intro. En ese momento se convierte lo leído a un valor del tipo `int` y lo guarda en la variable indicada. Además de los operadores relacionales, en este ejemplo utilizamos también el operador condicional, que compara si los números son iguales. Si lo son, devuelve la cadena iguales y sino, la cadena distintos.
+
+![](.gitbook/assets/prog01_cont_r30_ejemplorelacionalycondicional.jpg)
+
+#### 5.3.4 Precedencia de operadores
+
+El orden de precedencia de los operadores determina la secuencia en que deben realizarse las operaciones cuando en una expresión intervienen operadores de distinto tipo.
+
+Las reglas de precedencia de operadores que utiliza Java coinciden con las reglas de las expresiones del álgebra convencional. Por ejemplo:
+
+* La multiplicación, división y resto de una operación se evalúan primero. Si dentro de la misma expresión tengo varias operaciones de este tipo, empezaré evaluándolas de izquierda a derecha.
+* La suma y la resta se aplican después que las anteriores. De la misma forma, si dentro de la misma expresión tengo varias sumas y restas empezaré evaluándolas de izquierda a derecha.
+
+A la hora de evaluar una expresión es necesario tener en cuenta la **asociatividad** de los operadores. La asociatividad indica qué operador se evalúa antes, en condiciones de igualdad de precedencia. Los operadores de asignación, el operador condicional \(`?:`\), los operadores incrementales \(`++, --`\) y el casting son asociativos por la derecha. El resto de operadores son asociativos por la izquierda, es decir, que se empiezan a calcular en el mismo orden en el que están escritos: de izquierda a derecha. Por ejemplo, en la expresión siguiente:
+
+```text
+10 / 2 * 5
+```
+
+Realmente la operación que se realiza es `(10 / 2 ) * 5`, porque ambos operadores, división y multiplicación, tienen igual precedencia y por tanto se evalúa primero el que antes nos encontramos por la izquierda, que es la división. El resultado de la expresión es `25`. Si fueran asociativos por la derecha, puedes comprobar que el resultado sería diferente, primero multiplicaríamos `2 * 5` y luego dividiríamos entre `10`, por lo que el resultado sería 1. En esta otra expresión:
+
+```text
+x = y = z = 1
+```
+
+Realmente la operación que se realiza es `x = (y = (z = 1))`. Primero asignamos el valor de `1` a la variable `z`, luego a la variable `y`, para terminar asignando el resultado de esta última asignación a `x`. Si el operador asignación fuera asociativo por la izquierda esta operación no se podría realizar, ya que intentaríamos asignar a `x` el valor de `y`, pero `y` aún no habría sido inicializada.
+
+En la tabla se detalla el orden de precedencia y la asociatividad de los operadores que hemos comentado en este apartado. Los operadores se muestran de mayor a menor precedencia.
+
+Orden de precedencia de operadores en Java
+
+| Operador | Tipo | Asociatividad |
+| :--- | :--- | :--- |
+| `++ --` | Unario, notación postfija | Derecha |
+| `++ -- + -`  `(cast) ! ~` | Unario, notación prefija | Derecha |
+| `* / %` | Aritméticos | Izquierda |
+| `+ -` | Aritméticos | Izquierda |
+| `<< >> >>>` | Bits | Izquierda |
+| `< <= > >=` | Relacionales | Izquierda |
+| `== !=` | Relacionales | Izquierda |
+| `&` | Lógico, Bits | Izquierda |
+| `^` | Lógico, Bits | Izquierda |
+| `|` | Lógico, Bits | Izquierda |
+| `&&` | Lógico | Izquierda |
+| `||` | Lógico | Izquierda |
+| `?:` | Operador condicional | Derecha |
+| `= += -= *=`  `/= %=` | Asignación | Derecha |
+
+### 5.4 Conversión de tipo
+
+Imagina que queremos dividir un número entre otro ¿tendrá decimales el resultado de esa división? Podemos pensar que siempre que el denominador no sea divisible entre el divisor, tendremos un resultado con decimales, pero no es así. Si el denominador y el divisor son variables de tipo entero, el resultado será entero y no tendrá decimales. Para que el resultado tenga decimales necesitaremos hacer una **conversión de tipo**.
+
+Las conversiones de tipo se realizan para hacer que el resultado de una expresión sea del tipo que nosotros deseamos, en el ejemplo anterior para hacer que el resultado de la división sea de tipo real y, por ende, tenga decimales. Existen dos tipos de conversiones:
+
+* **Conversiones automáticas**. Cuando a una variable de un tipo se le asigna un valor de otro tipo numérico con menos bits para su representación, se realiza una conversión automática. En ese caso, el valor se dice que es promocionado al tipo más grande \(el de la variable\), para poder hacer la asignación. También se realizan conversiones automáticas en las operaciones aritméticas, cuando estamos utilizando valores de distinto tipo, el valor más pequeño se promociona al valor más grande, ya que el tipo mayor siempre podrá representar cualquier valor del tipo menor \(por ejemplo, de `int` a `long` o de `float` a `double`\).
+* **Conversiones explícitas**. Cuando hacemos una conversión de un tipo con más bits a un tipo con menos bits. En estos casos debemos indicar que queremos hacer la conversión de manera expresa, ya que se puede producir una pérdida de datos y hemos de ser conscientes de ello. Este tipo de conversiones se realiza con el **operador `cast`**. El operador `cast` es un operador unario que se forma colocando delante del valor a convertir el tipo de dato entre paréntesis. Tiene la misma precedencia que el resto de operadores unarios y se asocia de izquierda a derecha.
+
+Debemos tener en cuenta que **un valor numérico nunca puede ser asignado a una variable de un tipo menor en rango, si no es con una conversión explícita**. Por ejemplo:
+
+```text
+int a;
+byte b;
+a = 12;               // no se realiza conversión alguna  
+b = 12;               // se permite porque 12 está dentro
+                      // del rango permitido de valores para b
+b = a;                // error, no permitido (incluso aunque
+                      // 12 podría almacenarse en un byte)
+byte b = (byte) a;    // Correcto, forzamos conversión explícita
+```
+
+En el ejemplo anterior vemos un caso típico de error de tipos, ya que estamos intentando asignarle a `b` el valor de `a`, siendo `b` de un tipo más pequeño. Lo correcto es promocionar `a` al tipo de datos `byte`, y entonces asignarle su valor a la variable `b`.
+
+> **Debes conocer:**
+>
+> En el siguiente enlace viene información importante sobre cómo se producen las conversiones de tipos en Java, tanto automáticas como explícitas:
+
