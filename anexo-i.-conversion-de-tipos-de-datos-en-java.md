@@ -51,10 +51,12 @@ Tabla sobre otras consideraciones con los Tipos de Datos:
         <p>Cuando convertimos n&#xFA;meros en coma flotante a n&#xFA;meros enteros,
           la parte decimal se trunca (redondeo a cero). Si queremos hacer otro tipo
           de redondeo, podemos utilizar, entre otras, las siguientes funciones:</p>
+        <p></p>
         <p><b>+ Math.round(num):</b> Redondeo al siguiente n&#xFA;mero entero.</p>
         <p><b>+ Math.ceil(num):</b> M&#xED;nimo entero que sea mayor o igual a num.</p>
         <p><b>+ Math.floor(num):</b> Entero mayor, que sea inferior o igual a num.</p>
-        <p>double num=3.5</p>
+        <p>double num=3.5.</p>
+        <p></p>
         <p><code>x=Math.round(num);    //  x = 4</code>
         </p>
         <p><code>y=Math.ceil(num);        // y = 4</code>
@@ -66,7 +68,9 @@ Tabla sobre otras consideraciones con los Tipos de Datos:
         <p>Como un tipo <code>char</code> lo que guarda en realidad es el c&#xF3;digo <b>Unicode</b> de
           un car&#xE1;cter, los caracteres pueden ser considerados como n&#xFA;meros
           enteros sin signo.</p>
+        <p></p>
         <p>Ejemplo:</p>
+        <p></p>
         <p><code>int num;</code>
         </p>
         <p><code>char c;</code>
@@ -82,18 +86,25 @@ Tabla sobre otras consideraciones con los Tipos de Datos:
       <td style="text-align:left">
         <p>Para convertir cadenas de texto a otros tipos de datos se utilizan las
           siguientes funciones:</p>
-        <p>```java</p>
-        <p>num=Byte.parseByte(cad):</p>
-        <p>num=Short.parseShort(cad);</p>
-        <p>num=Integer.parseInt(cad);</p>
-        <p>num=Long.parseLong(cad);</p>
-        <p>num=Float.parseFloat(cad);</p>
-        <p>num=Double.parseDouble(cad);</p>
-        <p>```</p>
+        <p></p>
+        <p><code>num=Byte.parseByte(cad):</code>
+        </p>
+        <p><code>num=Short.parseShort(cad);</code>
+        </p>
+        <p><code>num=Integer.parseInt(cad);</code>
+        </p>
+        <p><code>num=Long.parseLong(cad);</code>
+        </p>
+        <p><code>num=Float.parseFloat(cad);</code>
+        </p>
+        <p><code>num=Double.parseDouble(cad); </code>
+        </p>
+        <p></p>
         <p>Por ejemplo, si hemos le&#xED;do de teclado un n&#xFA;mero que est&#xE1;
           almacenado en una variable de tipo <code>String</code> llamada <code>cadena</code>,
           y lo queremos convertir al tipo de datos <code>byte</code>, har&#xED;amos
           lo siguiente:</p>
+        <p></p>
         <p><code>byte n=Byte.parseByte(cadena);</code>
         </p>
       </td>
