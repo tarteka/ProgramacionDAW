@@ -33,7 +33,9 @@ Para conseguirlo, cuando afrontemos la construcción de la solución tendremos q
 
 Después de analizar en detalle el problema a solucionar, hemos de diseñar y desarrollar una solución. Para ello, en muchas ocasiones recurriremos a los algoritmos. Pero, **¿Qué es un algoritmo?**
 
-> **Algoritmo:** secuencia ordenada de pasos, descrita sin ambigüedades, que conducen a la solución de un problema dado.
+{% hint style="success" %}
+**Algoritmo:** secuencia ordenada de pasos, descrita sin ambigüedades, que conducen a la solución de un problema dado.
+{% endhint %}
 
 Los algoritmos son independientes de los lenguajes de programación y de las computadoras donde se ejecutan. Un mismo algoritmo puede ser expresado en diferentes lenguajes de programación y podría ser ejecutado en diferentes dispositivos. Piensa en una receta de cocina, ésta puede ser expresada en castellano, inglés o francés, podría ser cocinada en fogón o vitrocerámica, por un cocinero o más, etc. Pero independientemente de todas estas circunstancias, el plato se preparará siguiendo los mismos pasos.
 
@@ -55,13 +57,17 @@ Para representar gráficamente los algoritmos que vamos a diseñar, tenemos a nu
 * **Pseudocódigo:** Esta técnica se basa en el uso de palabras clave en lenguaje natural, **constantes**, **variables**, otros objetos, instrucciones y estructuras de programación que expresan de forma escrita la solución del problema. Es la técnica más utilizada actualmente.
 * **Tablas de decisión:** En una tabla son representadas las posibles condiciones del problema con sus respectivas acciones. Suele ser una técnica de apoyo al pseudocódigo cuando existen situaciones condicionales complejas.
 
-> A continuación te ofrecemos un enlace a un vídeo en el que puedes ver los elementos gráficos fundamentales que se utilizan para la generación de diagramas de flujo. [https://www.youtube.com/watch?v=tMEscFCEP0g](https://www.youtube.com/watch?v=tMEscFCEP0g)
+{% hint style="info" %}
+A continuación te ofrecemos un enlace a un vídeo en el que puedes ver los elementos gráficos fundamentales que se utilizan para la generación de diagramas de flujo. [https://www.youtube.com/watch?v=tMEscFCEP0g](https://www.youtube.com/watch?v=tMEscFCEP0g)
+{% endhint %}
 
 ### 2.3 Lenguajes de programación
 
 Como hemos visto, en todo el proceso de resolución de un problema mediante la creación de software, después del análisis del problema y del diseño del algoritmo que pueda resolverlo, es necesario traducir éste a un lenguaje que exprese claramente cada uno de los pasos a seguir para su correcta ejecución. Este lenguaje recibe el nombre de lenguaje de programación.
 
-> **Lenguaje de programación:** Conjunto de reglas sintácticas y semánticas, símbolos y palabras especiales establecidas para la construcción de programas. Es un lenguaje artificial, una construcción mental del ser humano para expresar programas.
+{% hint style="success" %}
+**Lenguaje de programación:** Conjunto de reglas sintácticas y semánticas, símbolos y palabras especiales establecidas para la construcción de programas. Es un lenguaje artificial, una construcción mental del ser humano para expresar programas.
+{% endhint %}
 
 Hay que tener en cuenta que pueden existir sentencias sintácticamente correctas, pero semánticamente incorrectas. Por ejemplo, _“Un avestruz dio un zarpazo a su cuidador”_ está bien construida sintácticamente, pero es evidente que semánticamente no.
 
@@ -96,7 +102,9 @@ Dada la complejidad y dificultades que ofrecía este lenguaje, fue sustituido po
 
 La evolución del lenguaje máquina fue el lenguaje ensamblador. Las instrucciones ya no son secuencias binarias, se sustituyen por códigos de operación que describen una operación elemental del procesador. Es un lenguaje de bajo nivel, al igual que el lenguaje máquina, ya que dependen directamente del hardware donde son ejecutados.
 
-> **Mnemotécnico:** son palabras especiales, que sustituyen largas secuencias de ceros y unos, utilizadas para referirse a diferentes operaciones disponibles en el juego de instrucciones que soporta cada máquina en particular.
+{% hint style="success" %}
+**Mnemotécnico:** son palabras especiales, que sustituyen largas secuencias de ceros y unos, utilizadas para referirse a diferentes operaciones disponibles en el juego de instrucciones que soporta cada máquina en particular.
+{% endhint %}
 
 En ensamblador, cada instrucción \(mnemotécnico\) se corresponde a una instrucción del procesador. En la siguiente tabla se muestran algunos ejemplos.
 
@@ -133,7 +141,9 @@ Al ser lenguajes más cercanos al humano, también se les denomina **lenguajes d
 
 Pero un programa que está escrito en un lenguaje de alto nivel también tiene que traducirse a un código que pueda utilizar la máquina. Los programas traductores que pueden realizar esta operación se llaman compiladores.
 
-> **Compilador:** es un programa cuya función consiste en traducir el código fuente de un programa escrito en un lenguaje de alto nivel a lenguaje máquina. Al proceso de traducción se le conoce con el nombre de compilación.
+{% hint style="success" %}
+**Compilador:** es un programa cuya función consiste en traducir el código fuente de un programa escrito en un lenguaje de alto nivel a lenguaje máquina. Al proceso de traducción se le conoce con el nombre de compilación.
+{% endhint %}
 
 Para ilustrar el proceso de compilación de programas te proponemos el siguiente equema:
 
@@ -145,7 +155,9 @@ El compilador realizará la traducción y además informará de los posibles err
 
 Se caracterizan por estar diseñados para que su ejecución se realice a través de un **intérprete**. Cada instrucción escrita en un lenguaje interpretado se analiza, traduce y ejecuta tras haber sido verificada. Una vez realizado el proceso por el intérprete, la instrucción se ejecuta, pero no se guarda en memoria.
 
-> **Intérprete:** es un programa traductor de un lenguaje de alto nivel en el que el proceso de traducción y de ejecución se llevan a cabo simultáneamente, es decir, la instrucción se pasa a lenguaje máquina y se ejecuta directamente. No se genera programa objeto, ni programa ejecutable.
+{% hint style="success" %}
+**Intérprete:** es un programa traductor de un lenguaje de alto nivel en el que el proceso de traducción y de ejecución se llevan a cabo simultáneamente, es decir, la instrucción se pasa a lenguaje máquina y se ejecuta directamente. No se genera programa objeto, ni programa ejecutable.
+{% endhint %}
 
 Los lenguajes interpretados generan programas de menor tamaño que los generados por un compilador, al no guardar el programa traducido a código máquina. Pero presentan el inconveniente de ser algo más lentos, ya que han de ser traducidos durante su ejecución. Por otra parte, necesitan disponer en la máquina del programa intérprete ejecutándose, algo que no es necesario en el caso de un programa compilado, para los que sólo es necesario tener el programa ejecutable para poder utilizarlo.
 
@@ -175,9 +187,9 @@ Las características principales de lenguaje Java se resumen a continuación:
 * Es robusto, realizando comprobaciones del código en tiempo de compilación y de ejecución.
 * La seguridad está garantizada, ya que las aplicaciones Java no acceden a zonas delicadas de memoria o de sistema.
 
-> **Debes Conocer**
->
-> Obtén una descripción detallada de las características reseñadas anteriormente a través del siguiente artículo: [Características detalladas del lenguaje Java](http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_Java/Caracter%C3%ADsticas_del_lenguaje)
+{% hint style="info" %}
+Obtén una descripción detallada de las características reseñadas anteriormente a través del siguiente artículo: [Características detalladas del lenguaje Java](http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_Java/Caracter%C3%ADsticas_del_lenguaje)
+{% endhint %}
 
 #### 2.4.1 Breve historia
 
@@ -208,12 +220,12 @@ Actualmente hay tres ediciones de la plataforma Java 2:
 * **J2EE**: Pensada para la creación de aplicaciones Java empresariales y del lado del servidor.
 * **J2ME**: Pensada para la creación de aplicaciones Java para dispositivos móviles.
 
-> **Para saber más**
->
-> Si deseas conocer más sobre los orígenes del lenguaje Java, aquí te ofrecemos más información:
->
-> * [Historia de Java](http://es.wikipedia.org/wiki/Java_%28lenguaje_de_programaci%C3%B3n%29#Historia)
-> * [Línea de tiempo de la historia de Java](https://www.timetoast.com/timelines/evolution-of-the-smart-car)
+{% hint style="info" %}
+Si deseas conocer más sobre los orígenes del lenguaje Java, aquí te ofrecemos más información:
+
+* [Historia de Java](http://es.wikipedia.org/wiki/Java_%28lenguaje_de_programaci%C3%B3n%29#Historia)
+* [Línea de tiempo de la historia de Java](https://www.timetoast.com/timelines/evolution-of-the-smart-car)
+{% endhint %}
 
 #### 2.4.3 Independencia de la plataforma y trabajo en red
 
@@ -253,7 +265,11 @@ Un programa escrito en Java no es directamente ejecutable, es necesario que el c
 
 ![](.gitbook/assets/prog01_cont_r16_programas_en_java.png)
 
-Una vez escrito el código fuente \(archivos con extensión `.Java`\), éste es precompilado generándose los códigos de bytes, Bytecodes o Java Bytecodes \(archivos con extensión `.class`\) que serán interpretados directamente por la Maquina Virtual Java y traducidos a código nativo de la plataforma sobre la que se esté ejecutando el programa. **Bytecode:** Son un conjunto de instrucciones en lenguaje máquina que no son específicas a ningún procesador o sistema de cómputo. Un intérprete de código de bytes \( bytecodes \) para una plataforma específica será quien los ejecute. A estos intérpretes también se les conoce como Máquinas Virtuales Java o intérpretes Java de tiempo de ejecución.
+Una vez escrito el código fuente \(archivos con extensión `.Java`\), éste es precompilado generándose los códigos de bytes, Bytecodes o Java Bytecodes \(archivos con extensión `.class`\) que serán interpretados directamente por la Maquina Virtual Java y traducidos a código nativo de la plataforma sobre la que se esté ejecutando el programa. 
+
+{% hint style="success" %}
+**Bytecode:** Son un conjunto de instrucciones en lenguaje máquina que no son específicas a ningún procesador o sistema de cómputo. Un intérprete de código de bytes \( bytecodes \) para una plataforma específica será quien los ejecute. A estos intérpretes también se les conoce como Máquinas Virtuales Java o intérpretes Java de tiempo de ejecución.
+{% endhint %}
 
 En el proceso de precompilación, existe un verificador de códigos de bytes que se asegurará de que se cumplen las siguientes condiciones:
 
@@ -366,9 +382,9 @@ Vamos a analizar cada uno de los elementos que aparecen en dicho gráfico:
 * **Bloques de código**: son conjuntos de instrucciones que se marcan mediante la apertura y cierre de llaves `{ }`. El código así marcado es considerado interno al bloque.
 * **Punto y coma**: aunque en el ejemplo no hemos incluido ninguna línea de código que termine con punto y coma, hay que hacer hincapié en que cada línea de código ha de terminar con punto y coma \(`;`\). En caso de no hacerlo, tendremos errores sintácticos. _\*\*_
 
-> **Recomendación:**
->
-> Ten en cuenta que **Java distingue entre mayúsculas y minúsculas**. Si le das a la clase principal el nombre PrimerPrograma, el archivo **`.Java`** tendrá como identificador **PrimerPrograma.Java**, que es totalmente diferente a primerprograma.Java. Además, para Java los elementos PrimerPrograma y primerprograma serían considerados dos clases diferentes dentro del código fuente.
+{% hint style="danger" %}
+Ten en cuenta que **Java distingue entre mayúsculas y minúsculas**. Si le das a la clase principal el nombre PrimerPrograma, el archivo **`.java`** tendrá como identificador **PrimerPrograma.java**, que es totalmente diferente a primerprograma.Java. Además, para Java los elementos PrimerPrograma y primerprograma serían considerados dos clases diferentes dentro del código fuente.
+{% endhint %}
 
 ### 4.2 Identificadores
 
@@ -390,7 +406,9 @@ Esto quiere decir que en Java se pueden utilizar varios alfabetos como el Griego
 
 El estándar Unicode originalmente utilizaba 16 bits, pudiendo representar hasta 65.536 caracteres distintos, que es el resultado de elevar dos a la potencia dieciséis. Actualmente Unicode puede utilizar más o menos bits, dependiendo del formato que se utilice: **UTF-8**, **UTF-16** ó **UTF-32. A cada carácter le corresponde unívocamente un número entero perteneciente al intervalo de 0 a 2 elevado a n, siendo n el número de bits utilizados para representar los caracteres. Por ejemplo, la letra** ñ es el entero 164. Además, el código Unicode es “compatible” con el código ASCII, ya que para los caracteres del código ASCII, Unicode asigna como código los mismos 8 bits, a los que les añade a la izquierda otros 8 bits todos a cero. La conversión de un carácter ASCII a Unicode es inmediata.
 
-> **Recomendación**: Una buena práctica de programación es seleccionar nombres adecuados para las variables, eso ayuda a que el programa se autodocumente, y evita un número excesivo de comentarios para aclarar el código.
+{% hint style="warning" %}
+Una buena práctica de programación es seleccionar nombres adecuados para las variables, eso ayuda a que el programa se autodocumente, y evita un número excesivo de comentarios para aclarar el código.
+{% endhint %}
 
 #### 4.2.2 Convenios y reglas para nombrar variables
 
@@ -487,9 +505,13 @@ genera un archivo html a partir de este tipo de comentarios
 */
 ```
 
-> **Reflexiona**: Una buena práctica de programación es añadir en la última llave que delimita cada bloque de código, un comentario indicando a qué clase o método pertenece esa llave.
->
-> **Para saber más**: Si quieres ir familiarizándote con la información que hay en la web de Oracle, en el siguiente enlace puedes encontrar más información sobre la herramienta Javadoc incluida en el Kit de Desarrollo de Java SE \(en inglés\): [Página oficial de Oracle sobre la herramienta Javadoc](http://download.oracle.com/javase/6/docs/technotes/guides/javadoc/index.html)
+{% hint style="warning" %}
+Una buena práctica de programación es añadir en la última llave que delimita cada bloque de código, un comentario indicando a qué clase o método pertenece esa llave.
+{% endhint %}
+
+{% hint style="info" %}
+Si quieres ir familiarizándote con la información que hay en la web de Oracle, en el siguiente enlace puedes encontrar más información sobre la herramienta Javadoc incluida en el Kit de Desarrollo de Java SE \(en inglés\): [Página oficial de Oracle sobre la herramienta Javadoc](http://download.oracle.com/javase/6/docs/technotes/guides/javadoc/index.html)
+{% endhint %}
 
 ## 5. Trabajando con variables
 
@@ -497,13 +519,13 @@ Una vez descritos los elementos básicos de un programa en Java, en este apartad
 
 Para ello, vamos a tratar sobre cómo se almacenan y recuperan los datos de variables y cadenas en Java, y cómo se gestionan estos datos desde el punto de vista de la utilización de operadores. Trabajar con datos es fundamental en cualquier programa. Aunque ya hayas programado en este lenguaje, échale un vistazo al contenido del apartado, porque podrás repasar muchos conceptos.
 
-> **Para saber más:**
->
-> Ahora que vamos a empezar con la sintaxis de Java, quizás te interese tener a mano la documentación que ofrece la página web de Oracle sobre **Java SE**. La plataforma Java SE está formada principalmente por dos productos: el **JDK**, que contiene los **compiladores** y **depuradores** necesarios para programar, y el **JRE**, que proporciona las librerías o bibliotecas y la **JVM**, entre otra serie de componentes.
->
-> Puedes consultar información de la versión 8 de Java SE, en el siguiente enlace donde puedes encontrar toda la documentación sobre esta tecnología: [Documentación de Oracle sobre Java SE](https://docs.oracle.com/javase/8/)
->
-> Dentro de la documentación de Oracle sobre Java SE se encuentra el libro “The Java Language Specification”. Este libro está escrito por los inventores del lenguaje, y constituye una referencia técnica casi obligada sobre el mismo. Como mucha de la documentación oficial de Java, se encuentra en inglés: [The Java Language Specification](http://java.sun.com/docs/books/jls/index.html)
+{% hint style="info" %}
+Ahora que vamos a empezar con la sintaxis de Java, quizás te interese tener a mano la documentación que ofrece la página web de Oracle sobre **Java SE**. La plataforma Java SE está formada principalmente por dos productos: el **JDK**, que contiene los **compiladores** y **depuradores** necesarios para programar, y el **JRE**, que proporciona las librerías o bibliotecas y la **JVM**, entre otra serie de componentes.
+
+Puedes consultar información de la versión 8 de Java SE, en el siguiente enlace donde puedes encontrar toda la documentación sobre esta tecnología: [Documentación de Oracle sobre Java SE](https://docs.oracle.com/javase/8/)
+
+Dentro de la documentación de Oracle sobre Java SE se encuentra el libro “The Java Language Specification”. Este libro está escrito por los inventores del lenguaje, y constituye una referencia técnica casi obligada sobre el mismo. Como mucha de la documentación oficial de Java, se encuentra en inglés: [The Java Language Specification](http://java.sun.com/docs/books/jls/index.html)
+{% endhint %}
 
 ### 5.1 Las variables
 
@@ -591,9 +613,15 @@ En concreto, sólo se almacena la **mantisa** y el exponente al que va elevada l
 
 En Java las variables de tipo `float` se emplean para representar los números en coma flotante de simple precisión de 32 bits, de los cuales 24 son para la mantisa y 8 para el exponente. La mantisa es un valor entre -1.0 y 1.0 y el exponente representa la potencia de 2 necesaria para obtener el valor que se quiere representar. Por su parte, las variables tipo `double` representan los números en coma flotante de doble precisión de 64 bits, de los cuales 53 son para la mantisa y 11 para el exponente.
 
-> La mayoría de los programadores en Java emplean el tipo `double` cuando trabajan con datos de tipo real, es una forma de asegurarse de que los errores cometidos por las sucesivas aproximaciones sean menores. De hecho, Java considera los valores en coma flotante como de tipo `double` por defecto. Con el objetivo de conseguir la máxima portabilidad de los programas, Java utiliza el estándar internacional **IEEE 754** para la representación interna de los números en coma flotante, que es una forma de asegurarse de que el resultado de los cálculos sea el mismo para diferentes plataformas.
->
-> **Para saber más:** La siguiente página es la web oficial sobre el estándar internacional IEEE 754-2008 para representación de números en coma flotante \(en inglés\): [Notación IEEE 754](https://es.wikipedia.org/wiki/IEEE_coma_flotante)
+{% hint style="success" %}
+La mayoría de los programadores en Java emplean el tipo `double` cuando trabajan con datos de tipo real, es una forma de asegurarse de que los errores cometidos por las sucesivas aproximaciones sean menores. De hecho, Java considera los valores en coma flotante como de tipo `double` por defecto.
+{% endhint %}
+
+Con el objetivo de conseguir la máxima portabilidad de los programas, Java utiliza el estándar internacional **IEEE 754** para la representación interna de los números en coma flotante, que es una forma de asegurarse de que el resultado de los cálculos sea el mismo para diferentes plataformas.
+
+{% hint style="info" %}
+La siguiente página es la web oficial sobre el estándar internacional IEEE 754-2008 para representación de números en coma flotante \(en inglés\): [Notación IEEE 754](https://es.wikipedia.org/wiki/IEEE_coma_flotante)
+{% endhint %}
 
 **5.2.1.2 Literales de los tipos primitivos**
 
@@ -620,7 +648,9 @@ Un **literal carácter** puede escribirse como un carácter entre comillas simpl
 | `\n` | Salto de línea | `\'` | Carácter comillas simples |
 | `\f` | Salto de página | `\\` | Barra diagonal |
 
+{% hint style="success" %}
 **Normalmente, los objetos en Java deben ser creados con la orden `new`. Sin embargo, los literales String no lo necesitan ya que son objetos que se crean implícitamente por Java.**
+{% endhint %}
 
 Los **literales de cadenas de caracteres** se indican entre comillas dobles. En el ejemplo anterior “`El primer programa`” es un literal de tipo cadena de caracteres. Al construir una cadena de caracteres se puede incluir cualquier carácter Unicode excepto un carácter de retorno de carro, por ejemplo en la siguiente instrucción utilizamos la secuencia de escape \’’ para escribir dobles comillas dentro del mensaje:
 
@@ -902,9 +932,9 @@ byte b = (byte) a;    // Correcto, forzamos conversión explícita
 
 En el ejemplo anterior vemos un caso típico de error de tipos, ya que estamos intentando asignarle a `b` el valor de `a`, siendo `b` de un tipo más pequeño. Lo correcto es promocionar `a` al tipo de datos `byte`, y entonces asignarle su valor a la variable `b`.
 
-> **Debes conocer:**
->
-> En el siguiente enlace viene información importante sobre cómo se producen las conversiones de tipos en Java, tanto automáticas como explícitas: [Conversión de Tipos de Datos en Java](anexo-i.-conversion-de-tipos-de-datos-en-java.md)
+{% hint style="info" %}
+En el siguiente enlace viene información importante sobre cómo se producen las conversiones de tipos en Java, tanto automáticas como explícitas: [Conversión de Tipos de Datos en Java](anexo-i.-conversion-de-tipos-de-datos-en-java.md)
+{% endhint %}
 
 ## 6. Estructuras de repetición
 
@@ -928,7 +958,7 @@ La utilización de unos bucles u otros para solucionar un problema dependerá en
 
 En esta UD nos vamos a centrar en los bucles `for`, dejando el resto para UDs posteriores.
 
-### 6.2 Estructuras FOR
+### 6.1 Estructuras FOR
 
 Hemos indicado anteriormente que el bucle `for` es un bucle controlado por contador. Este tipo de bucle tiene las siguientes características:
 
@@ -943,13 +973,13 @@ En general, existen tres operaciones que se llevan a cabo en este tipo de bucles
 
 ![](.gitbook/assets/prog01_cont_r05_diagramafor.jpg)
 
-> **Recomendación:**
->
-> La inicialización de la variable contadora debe realizase correctamente para garantizar que el bucle se lleve a cabo, al menos, la primera repetición de su código interno.
->
-> La condición de terminación del bucle debe variar en el interior del mismo, de no ser así, podemos caer en la creación de un bucle infinito. Cuestión que se debe evitar por todos los medios.
->
-> Es necesario estudiar el número de veces que se repite el bucle, pues debe ajustarse al número de veces estipulado.
+{% hint style="danger" %}
+La inicialización de la variable contadora debe realizase correctamente para garantizar que el bucle se lleve a cabo, al menos, la primera repetición de su código interno.
+
+La condición de terminación del bucle debe variar en el interior del mismo, de no ser así, podemos caer en la creación de un bucle infinito. Cuestión que se debe evitar por todos los medios.
+
+Es necesario estudiar el número de veces que se repite el bucle, pues debe ajustarse al número de veces estipulado.
+{% endhint %}
 
 **Sintaxis:**
 
@@ -1028,7 +1058,9 @@ Y luego realizar **llamadas** a él donde los queramos utilizar:
 identificadorMetodo();
 ```
 
-> Por ahora, hasta saber más sobre los métodos, los vamos a declarar **todos como** **public static void** y los vamos a utilizar para descomponer y estructurar programas.
->
-> Más adelante, iremos viendo otras características de los métodos.
+{% hint style="warning" %}
+Por ahora, hasta saber más sobre los métodos, los vamos a declarar **todos como** **public static void** y los vamos a utilizar para descomponer y estructurar programas.
+
+Más adelante, iremos viendo otras características de los métodos.
+{% endhint %}
 
