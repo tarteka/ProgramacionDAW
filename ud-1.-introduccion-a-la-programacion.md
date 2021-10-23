@@ -12,10 +12,10 @@ Por último, estudiaremos la técnica de descomposición y aprenderemos cómo di
 
 ### 2.1 Buscando una solución
 
-| En la vida real... | En programación... |
-| :--- | :--- |
-| Observación de la situación o problema. | **Análisis del problema:** requiere que el problema sea definido y comprendido claramente para que pueda ser analizado con todo detalle. |
-| Pensamos en una o varias posibles soluciones. | **Diseño o desarrollo de algoritmos:** procedimiento paso a paso para solucionar el problema dado. |
+| En la vida real...                                | En programación...                                                                                                                                                       |
+| ------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Observación de la situación o problema.           | **Análisis del problema:** requiere que el problema sea definido y comprendido claramente para que pueda ser analizado con todo detalle.                                 |
+| Pensamos en una o varias posibles soluciones.     | **Diseño o desarrollo de algoritmos:** procedimiento paso a paso para solucionar el problema dado.                                                                       |
 | Aplicamos la solución que estimamos más adecuada. | **Resolución del algoritmo elegido en la computadora:** consiste en convertir el algoritmo en programa, ejecutarlo y comprobar que soluciona verdaderamente el problema. |
 
 ¿Qué virtudes debería tener nuestra solución?
@@ -49,7 +49,7 @@ En esencia, todo problema se puede describir por medio de un algoritmo y las car
 * Debe estar **definido**, si se ejecuta dos o más veces, debe obtener el mismo resultado cada vez.
 * Debe ser **finito**, debe tener un número finito de pasos.
 
-Pero cuando los problemas son complejos, es necesario descomponer éstos en subproblemas más simples y, a su vez, en otros más pequeños. Estas estrategias reciben el nombre de **diseño descendente** o **diseño modular** \(**top-down design**\). Este sistema se basa en el lema **divide y vencerás**.
+Pero cuando los problemas son complejos, es necesario descomponer éstos en subproblemas más simples y, a su vez, en otros más pequeños. Estas estrategias reciben el nombre de **diseño descendente** o **diseño modular** (**top-down design**). Este sistema se basa en el lema **divide y vencerás**.
 
 Para representar gráficamente los algoritmos que vamos a diseñar, tenemos a nuestra disposición diferentes herramientas que ayudarán a describir su comportamiento de una forma precisa y genérica, para luego poder codificarlos con el lenguaje que nos interese. Entre otras tenemos:
 
@@ -91,10 +91,10 @@ Programar en este tipo de lenguaje presentaba los siguientes inconvenientes:
 A continuación, se muestran algunos códigos binarios equivalentes a las operaciones de suma, resta y movimiento de datos en lenguaje máquina.
 
 | Operación | Lenguaje máquina |
-| :--- | :--- |
-| SUMAR | 00101101 |
-| RESTAR | 00010011 |
-| MOVER | 00111010 |
+| --------- | ---------------- |
+| SUMAR     | 00101101         |
+| RESTAR    | 00010011         |
+| MOVER     | 00111010         |
 
 Dada la complejidad y dificultades que ofrecía este lenguaje, fue sustituido por otros más sencillos y fáciles utilizar. No obstante, hay que tener en cuenta que todos los programas para poder ser ejecutados, han de traducirse siempre al lenguaje máquina que es el único que entiende la computadora.
 
@@ -106,17 +106,17 @@ La evolución del lenguaje máquina fue el lenguaje ensamblador. Las instruccion
 **Mnemotécnico:** son palabras especiales, que sustituyen largas secuencias de ceros y unos, utilizadas para referirse a diferentes operaciones disponibles en el juego de instrucciones que soporta cada máquina en particular.
 {% endhint %}
 
-En ensamblador, cada instrucción \(mnemotécnico\) se corresponde a una instrucción del procesador. En la siguiente tabla se muestran algunos ejemplos.
+En ensamblador, cada instrucción (mnemotécnico) se corresponde a una instrucción del procesador. En la siguiente tabla se muestran algunos ejemplos.
 
-| Operación | Lenguaje Ensamblador |
-| :--- | :--- |
-| MULTIPLICAR | MUL |
-| DIVIDIR | DIV |
-| MOVER | MOV |
+| Operación   | Lenguaje Ensamblador |
+| ----------- | -------------------- |
+| MULTIPLICAR | MUL                  |
+| DIVIDIR     | DIV                  |
+| MOVER       | MOV                  |
 
 En el siguiente gráfico puedes ver parte de un programa escrito en lenguaje ensamblador. En color rojo se ha resaltado el código máquina en **hexadecimal**, en magenta el código escrito en ensamblador y en azul, las direcciones de memoria donde se encuentra el código.
 
-![](.gitbook/assets/prog01_cont_r10_ensamblador.jpg)
+![](.gitbook/assets/PROG01\_CONT\_R10\_ensamblador.jpg)
 
 Pero aunque ensamblador fue un intento por aproximar el lenguaje de los procesadores al lenguaje humano, presentaba múltiples dificultades:
 
@@ -147,7 +147,7 @@ Pero un programa que está escrito en un lenguaje de alto nivel también tiene q
 
 Para ilustrar el proceso de compilación de programas te proponemos el siguiente equema:
 
-![Proceso de compilaci&#xF3;n en varias plataformas](.gitbook/assets/compilationscheme-spanish.png)
+![Proceso de compilación en varias plataformas](.gitbook/assets/CompilationScheme-Spanish.png)
 
 El compilador realizará la traducción y además informará de los posibles errores. Una vez subsanados, se generará el programa traducido a código máquina, conocido como **código objeto**. Este programa aún no podrá ser ejecutado hasta que no se le añadan los módulos de enlace o bibliotecas, durante el proceso de enlazado. Una vez finalizado el enlazado, se obtiene el **código ejecutable**.
 
@@ -163,7 +163,7 @@ Los lenguajes interpretados generan programas de menor tamaño que los generados
 
 Ejemplos de lenguajes interpretados son: **Perl, PHP, Python, JavaScript,** etc.
 
-A medio camino entre los lenguajes compilados y los interpretados, existen los lenguajes que podemos denominar **pseudo-compilados o pseudo-interpretados**, es el caso del **Lenguaje Java**. Java puede verse como compilado e interpretado a la vez, ya que su código fuente se compila para obtener el código binario en forma de bytecodes, que son estructuras parecidas a las instrucciones máquina, con la importante propiedad de no ser dependientes de ningún tipo de máquina \(se detallarán más adelante\). La Máquina Virtual Java se encargará de interpretar este código y, para su ejecución, lo traducirá a código máquina del procesador en particular sobre el que se esté trabajando.
+A medio camino entre los lenguajes compilados y los interpretados, existen los lenguajes que podemos denominar **pseudo-compilados o pseudo-interpretados**, es el caso del **Lenguaje Java**. Java puede verse como compilado e interpretado a la vez, ya que su código fuente se compila para obtener el código binario en forma de bytecodes, que son estructuras parecidas a las instrucciones máquina, con la importante propiedad de no ser dependientes de ningún tipo de máquina (se detallarán más adelante). La Máquina Virtual Java se encargará de interpretar este código y, para su ejecución, lo traducirá a código máquina del procesador en particular sobre el que se esté trabajando.
 
 ### 2.4 El lenguaje de programación Java
 
@@ -171,11 +171,11 @@ A medio camino entre los lenguajes compilados y los interpretados, existen los l
 
 Java es un lenguaje sencillo de aprender, con una sintaxis parecida a la de C++, pero en la que se han eliminado elementos complicados y que pueden originar errores. Java es orientado a objetos, con lo que elimina muchas preocupaciones al programador y permite la utilización de gran cantidad de bibliotecas ya definidas, evitando reescribir código que ya existe. Es un lenguaje de programación creado para satisfacer nuevas necesidades que los lenguajes existentes hasta el momento no eran capaces de solventar.
 
-Una de las principales virtudes de Java es su independencia del hardware, ya que el código que se genera es válido para cualquier plataforma. Este código será ejecutado sobre una máquina virtual denominada **Maquina Virtual Java** \(MVJ o JVM – Java Virtual Machine\), que interpretará el código convirtiéndolo a código específico de la plataforma que lo soporta. De este modo el programa se escribe una única vez y puede hacerse funcionar en cualquier lugar. Lema del lenguaje: _**“Write once, run everywhere”.**_
+Una de las principales virtudes de Java es su independencia del hardware, ya que el código que se genera es válido para cualquier plataforma. Este código será ejecutado sobre una máquina virtual denominada **Maquina Virtual Java** (MVJ o JVM – Java Virtual Machine), que interpretará el código convirtiéndolo a código específico de la plataforma que lo soporta. De este modo el programa se escribe una única vez y puede hacerse funcionar en cualquier lugar. Lema del lenguaje: _**“Write once, run everywhere”.**_
 
 Antes de que apareciera Java, el lenguaje C era uno de los más extendidos por su versatilidad. Pero cuando los programas escritos en C aumentaban de volumen, su manejo comenzaba a complicarse. Mediante las técnicas de programación estructurada y programación modular se conseguían reducir estas complicaciones, pero no era suficiente.
 
-Fue entonces cuando la Programación Orientada a Objetos \(POO\) entra en escena, aproximando notablemente la construcción de programas al pensamiento humano y haciendo más sencillo todo el proceso. Los problemas se dividen en objetos que tienen propiedades e interactúan con otros objetos, de este modo, el programador puede centrarse en cada objeto para programar internamente los elementos y funciones que lo componen.
+Fue entonces cuando la Programación Orientada a Objetos (POO) entra en escena, aproximando notablemente la construcción de programas al pensamiento humano y haciendo más sencillo todo el proceso. Los problemas se dividen en objetos que tienen propiedades e interactúan con otros objetos, de este modo, el programador puede centrarse en cada objeto para programar internamente los elementos y funciones que lo componen.
 
 Las características principales de lenguaje Java se resumen a continuación:
 
@@ -188,7 +188,7 @@ Las características principales de lenguaje Java se resumen a continuación:
 * La seguridad está garantizada, ya que las aplicaciones Java no acceden a zonas delicadas de memoria o de sistema.
 
 {% hint style="info" %}
-Obtén una descripción detallada de las características reseñadas anteriormente a través del siguiente artículo: [Características detalladas del lenguaje Java](http://es.wikibooks.org/wiki/Programaci%C3%B3n_en_Java/Caracter%C3%ADsticas_del_lenguaje)
+Obtén una descripción detallada de las características reseñadas anteriormente a través del siguiente artículo: [Características detalladas del lenguaje Java](http://es.wikibooks.org/wiki/Programaci%C3%B3n\_en\_Java/Caracter%C3%ADsticas\_del\_lenguaje)
 {% endhint %}
 
 #### 2.4.1 Breve historia
@@ -201,7 +201,7 @@ El factor determinante para su expansión fue la incorporación de un intérpret
 
 El principal objetivo del lenguaje Java es llegar a ser el **nexo universal** que conecte a los usuarios con la información, esté ésta situada en el ordenador local, en un servidor Web, en una base de datos o en cualquier otro lugar.
 
-Para el desarrollo de programas en lenguaje Java es necesario utilizar un entorno de desarrollo denominado **JDK** \(Java Development Kit\), que provee de un compilador y un entorno de ejecución \(**JRE** – Java Run Environment\) para los bytecodes generados a partir del código fuente. Al igual que las diferentes versiones del lenguaje han incorporado mejoras, el entorno de desarrollo y ejecución también ha sido mejorado sucesivamente.
+Para el desarrollo de programas en lenguaje Java es necesario utilizar un entorno de desarrollo denominado **JDK** (Java Development Kit), que provee de un compilador y un entorno de ejecución (**JRE** – Java Run Environment) para los bytecodes generados a partir del código fuente. Al igual que las diferentes versiones del lenguaje han incorporado mejoras, el entorno de desarrollo y ejecución también ha sido mejorado sucesivamente.
 
 **Java 2** es la tercera versión del lenguaje, pero es algo más que un lenguaje de programación, incluye los siguientes elementos:
 
@@ -212,7 +212,7 @@ Para el desarrollo de programas en lenguaje Java es necesario utilizar un entorn
 
 El siguiente esquema muestra los elementos fundamentales de la plataforma de desarrollo Java 2.
 
-![](.gitbook/assets/prog01_cont_r13_elementos_plataforma_java2.png)
+![](.gitbook/assets/PROG01\_CONT\_R13\_elementos\_plataforma\_java2.png)
 
 Actualmente hay tres ediciones de la plataforma Java 2:
 
@@ -223,7 +223,7 @@ Actualmente hay tres ediciones de la plataforma Java 2:
 {% hint style="info" %}
 Si deseas conocer más sobre los orígenes del lenguaje Java, aquí te ofrecemos más información:
 
-* [Historia de Java](http://es.wikipedia.org/wiki/Java_%28lenguaje_de_programaci%C3%B3n%29#Historia)
+* [Historia de Java](http://es.wikipedia.org/wiki/Java\_\(lenguaje\_de\_programaci%C3%B3n\)#Historia)
 * [Línea de tiempo de la historia de Java](https://www.timetoast.com/timelines/evolution-of-the-smart-car)
 {% endhint %}
 
@@ -233,42 +233,40 @@ Existen dos características que distinguen a **Java** de otros lenguajes, como 
 
 Estas características las vamos a explicar a continuación:
 
-1. **Independencia:** Los programas escritos en Java pueden ser ejecutados en cualquier tipo de hardware. El código fuente es compilado, generándose el código conocido como **Java Bytecode** \(instrucciones máquina simplificadas que son específicas de la plataforma Java\), el bytecode será interpretado y ejecutado en la **Máquina Virtual** **Java \(MVJ o JVM – Java Virtual Machine\)** que es un programa escrito en código nativo de la plataforma destino entendible por el hardware. Con esto se evita tener que realizar un programa diferente para cada CPU o plataforma.
+1.  **Independencia:** Los programas escritos en Java pueden ser ejecutados en cualquier tipo de hardware. El código fuente es compilado, generándose el código conocido como **Java Bytecode** (instrucciones máquina simplificadas que son específicas de la plataforma Java), el bytecode será interpretado y ejecutado en la **Máquina Virtual** **Java (MVJ o JVM – Java Virtual Machine)** que es un programa escrito en código nativo de la plataforma destino entendible por el hardware. Con esto se evita tener que realizar un programa diferente para cada CPU o plataforma.
 
-   Por tanto, la parte que realmente es dependiente del sistema es la Máquina Virtual Java, así como las librerías o bibliotecas básicas que permiten acceder directamente al hardware de la máquina.
-
+    Por tanto, la parte que realmente es dependiente del sistema es la Máquina Virtual Java, así como las librerías o bibliotecas básicas que permiten acceder directamente al hardware de la máquina.
 2. **Trabajo en red:** Esta capacidad del lenguaje ofrece múltiples posibilidades para la comunicación vía TCP/IP. Para poder hacerlo existen librerías que permiten el acceso y la interacción con protocolos como **http**, **ftp**, etc., facilitando al programador las tareas del tratamiento de la información a través de redes.
 
 #### 2.4.4 Seguridad y simplicidad
 
 Junto a las características diferenciadoras del lenguaje Java relacionadas con la independencia y el trabajo en red, han de destacarse dos virtudes que hacen a este lenguaje uno de los más extendidos entre la comunidad de programadores: su seguridad y su simplicidad.
 
-1. **Seguridad:** En primer lugar, los posibles accesos a zonas de memoria “sensibles” que en otros lenguajes como C y C++ podían suponer peligros importantes, se han eliminado en Java.
+1.  **Seguridad:** En primer lugar, los posibles accesos a zonas de memoria “sensibles” que en otros lenguajes como C y C++ podían suponer peligros importantes, se han eliminado en Java.
 
-   En segundo lugar, el código Java es comprobado y verificado para evitar que determinadas secciones del código produzcan efectos no deseados. Los test que se aplican garantizan que las operaciones, operandos, conversiones, uso de clases y demás acciones son seguras.
+    En segundo lugar, el código Java es comprobado y verificado para evitar que determinadas secciones del código produzcan efectos no deseados. Los test que se aplican garantizan que las operaciones, operandos, conversiones, uso de clases y demás acciones son seguras.
 
-   Y en tercer lugar, Java no permite la apertura de ficheros en la máquina local, tampoco permite ejecutar ninguna aplicación nativa de una plataforma e impide que se utilicen otros ordenadores como puente, es decir, nadie puede utilizar nuestra máquina para hacer peticiones o realizar operaciones con otra.
+    Y en tercer lugar, Java no permite la apertura de ficheros en la máquina local, tampoco permite ejecutar ninguna aplicación nativa de una plataforma e impide que se utilicen otros ordenadores como puente, es decir, nadie puede utilizar nuestra máquina para hacer peticiones o realizar operaciones con otra.
 
-   En definitiva, podemos afirmar que Java es un lenguaje seguro.
+    En definitiva, podemos afirmar que Java es un lenguaje seguro.
+2.  **Simplicidad:** Aunque Java es tan potente como C o C++, es bastante más sencillo. Posee una curva de aprendizaje muy rápida y, para alguien que comienza a programar en este lenguaje, le resulta relativamente fácil comenzar a escribir aplicaciones interesantes.
 
-2. **Simplicidad:** Aunque Java es tan potente como C o C++, es bastante más sencillo. Posee una curva de aprendizaje muy rápida y, para alguien que comienza a programar en este lenguaje, le resulta relativamente fácil comenzar a escribir aplicaciones interesantes.
+    Si has programado alguna vez en C o C++ encontrarás que Java te pone las cosas más fáciles, ya que se han eliminado: la aritmética de **punteros**, los registros, la definición de tipos, la gestión de memoria, etc. Con esta simplificación se reduce bastante la posibilidad de cometer errores comunes en los programas. Un programador experimentado en C o C++ puede cambiar a este lenguaje rápidamente y obtener resultados en muy poco espacio de tiempo.
 
-   Si has programado alguna vez en C o C++ encontrarás que Java te pone las cosas más fáciles, ya que se han eliminado: la aritmética de **punteros**, los registros, la definición de tipos, la gestión de memoria, etc. Con esta simplificación se reduce bastante la posibilidad de cometer errores comunes en los programas. Un programador experimentado en C o C++ puede cambiar a este lenguaje rápidamente y obtener resultados en muy poco espacio de tiempo.
+    Muy relacionado con la simplicidad que aporta Java está la incorporación de un elemento muy útil como es el **Recolector de Basura (Garbage collector)**. Permite al programador liberarse de la gestión de la memoria y hace que ciertos bloques de memoria puedan reaprovecharse, disminuyendo el número de huecos libres (**fragmentación de memoria**).
 
-   Muy relacionado con la simplicidad que aporta Java está la incorporación de un elemento muy útil como es el **Recolector de Basura \(Garbage collector\)**. Permite al programador liberarse de la gestión de la memoria y hace que ciertos bloques de memoria puedan reaprovecharse, disminuyendo el número de huecos libres \(**fragmentación de memoria**\).
-
-   Cuando realicemos programas, crearemos objetos, haremos que éstos interaccionen, etc. Todas estas operaciones requieren de uso de memoria del sistema, pero la gestión de ésta será realizada de manera transparente al programador. Todo lo contrario que ocurría en otros lenguajes. Podremos crear tantos objetos como solicitemos, pero nunca tendremos que destruirlos. El entorno de Java borrará los objetos cuando determine que no se van a utilizar más. Este proceso es conocido como recolección de basura.
+    Cuando realicemos programas, crearemos objetos, haremos que éstos interaccionen, etc. Todas estas operaciones requieren de uso de memoria del sistema, pero la gestión de ésta será realizada de manera transparente al programador. Todo lo contrario que ocurría en otros lenguajes. Podremos crear tantos objetos como solicitemos, pero nunca tendremos que destruirlos. El entorno de Java borrará los objetos cuando determine que no se van a utilizar más. Este proceso es conocido como recolección de basura.
 
 #### 2.4.5 Java y los Bytecodes
 
 Un programa escrito en Java no es directamente ejecutable, es necesario que el código fuente sea interpretado por la Maquina Virtual Java. ¿Cuáles son los pasos que se siguen desde que se genera el código fuente hasta que se ejecuta? A continuación se detallan cada uno de ellos.
 
-![](.gitbook/assets/prog01_cont_r16_programas_en_java.png)
+![](.gitbook/assets/PROG01\_CONT\_R16\_programas\_en\_Java.png)
 
-Una vez escrito el código fuente \(archivos con extensión `.Java`\), éste es precompilado generándose los códigos de bytes, Bytecodes o Java Bytecodes \(archivos con extensión `.class`\) que serán interpretados directamente por la Maquina Virtual Java y traducidos a código nativo de la plataforma sobre la que se esté ejecutando el programa. 
+Una vez escrito el código fuente (archivos con extensión `.Java`), éste es precompilado generándose los códigos de bytes, Bytecodes o Java Bytecodes (archivos con extensión `.class`) que serán interpretados directamente por la Maquina Virtual Java y traducidos a código nativo de la plataforma sobre la que se esté ejecutando el programa.&#x20;
 
 {% hint style="success" %}
-**Bytecode:** Son un conjunto de instrucciones en lenguaje máquina que no son específicas a ningún procesador o sistema de cómputo. Un intérprete de código de bytes \( bytecodes \) para una plataforma específica será quien los ejecute. A estos intérpretes también se les conoce como Máquinas Virtuales Java o intérpretes Java de tiempo de ejecución.
+**Bytecode:** Son un conjunto de instrucciones en lenguaje máquina que no son específicas a ningún procesador o sistema de cómputo. Un intérprete de código de bytes ( bytecodes ) para una plataforma específica será quien los ejecute. A estos intérpretes también se les conoce como Máquinas Virtuales Java o intérpretes Java de tiempo de ejecución.
 {% endhint %}
 
 En el proceso de precompilación, existe un verificador de códigos de bytes que se asegurará de que se cumplen las siguientes condiciones:
@@ -281,7 +279,7 @@ En el proceso de precompilación, existe un verificador de códigos de bytes que
 
 Para que un bytecode pueda ser ejecutado en cualquier plataforma, es imprescindible que dicha plataforma cuente con el intérprete adecuado, es decir, la máquina virtual específica para esa plataforma. En general, la Máquina Virtual Java es un programa de reducido tamaño y gratuito para todos los sistemas operativos.
 
-![](.gitbook/assets/prog01_cont_r17_javabytecode.png)
+![](.gitbook/assets/PROG01\_CONT\_R17\_javabytecode.png)
 
 #### 2.4.6 Tipo de aplicaciones en Java
 
@@ -290,7 +288,7 @@ La versatilidad del lenguaje de programación Java permite al programador crear 
 * **Aplicaciones de consola:**
   * Son programas independientes al igual que los creados con los lenguajes tradicionales.
   * Se componen como mínimo de un archivo `.class` que debe contar necesariamente con el método `main`.
-  * No necesitan un navegador web y se ejecutan cuando invocamos el comando Java para iniciar la Máquina Virtual de Java \(JVM\). De no encontrarse el método `main` la aplicación no podrá ejecutarse.
+  * No necesitan un navegador web y se ejecutan cuando invocamos el comando Java para iniciar la Máquina Virtual de Java (JVM). De no encontrarse el método `main` la aplicación no podrá ejecutarse.
   * Las aplicaciones de consola leen y escriben hacia y desde la entrada y salida estándar, sin ninguna interfaz gráfica de usuario.
 * **Aplicaciones gráficas:**
   * Aquellas que utilizan las clases con capacidades gráficas, como Swing que es la biblioteca para la interfaz gráfica de usuario avanzada de la plataforma Java SE.
@@ -298,7 +296,7 @@ La versatilidad del lenguaje de programación Java permite al programador crear 
 * **Applets:**
   * Son programas incrustados en otras aplicaciones, normalmente una página web que se muestra en un navegador. Cuando el navegador carga una web que contiene un applet, éste se descarga en el navegador web y comienza a ejecutarse. Esto nos permite crear programas que cualquier usuario puede ejecutar con tan solo cargar la página web en su navegador.
   * Se pueden descargar de Internet y se observan en un navegador. Los applets se descargan junto con una página HTML desde un servidor web y se ejecutan en la máquina cliente.
-  * No tienen acceso a partes sensibles \(por ejemplo: no pueden escribir archivos\), a menos que uno mismo le dé los permisos necesarios en el sistema.
+  * No tienen acceso a partes sensibles (por ejemplo: no pueden escribir archivos), a menos que uno mismo le dé los permisos necesarios en el sistema.
   * No tienen un método principal.
   * Son multiplataforma y pueden ejecutarse en cualquier navegador que soporte Java.
 * **Servlets:**
@@ -306,10 +304,10 @@ La versatilidad del lenguaje de programación Java permite al programador crear 
   * Los servlets, al contrario de los applets, son programas que están pensados para trabajar en el lado del servidor y desarrollar aplicaciones Web que interactúen con los clientes.
 * **Midlets:**
   * Son aplicaciones creadas en Java para su ejecución en sistemas de propósito simple o dispositivos móviles. Los juegos Java creados para teléfonos móviles son midlets.
-  * Son programas creados para dispositivos embebidos \(se dedican a una sola actividad\), más específicamente para la máquina virtual Java MicroEdition \(Java ME\).
+  * Son programas creados para dispositivos embebidos (se dedican a una sola actividad), más específicamente para la máquina virtual Java MicroEdition (Java ME).
   * Generalmente son juegos y aplicaciones que se ejecutan en teléfonos móviles.
 
-## 3 Entornos Integrados de Desarrollo \(IDE\)
+## 3 Entornos Integrados de Desarrollo (IDE)
 
 En los comienzos de Java la utilización de la línea de comandos era algo habitual. El programador escribía el código fuente empleando un editor de texto básico, seguidamente, pasaba a utilizar un compilador y con él obtenía el código compilado. En un paso posterior, necesitaba emplear una tercera herramienta para el ensamblado del programa. Por último, podía probar a través de la línea de comandos el archivo ejecutable. El problema surgía cuando se producía algún error, lo que provocaba tener que volver a iniciar el proceso completo.
 
@@ -317,7 +315,7 @@ Estas circunstancias hacían que el desarrollo de software no estuviera optimiza
 
 ### 3.1 ¿Qué son?
 
-Son aplicaciones que ofrecen la posibilidad de llevar a cabo el proceso completo de desarrollo de software a través de un único programa. Podremos realizar las labores de edición, compilación, depuración, detección de errores, corrección y ejecución de programas escritos en Java o en otros lenguajes de programación, bajo un entorno gráfico \(no mediante línea de comandos\). Junto a las capacidades descritas, cada entorno añade otras que ayudan a realizar el proceso de programación, como por ejemplo: código fuente coloreado, plantillas para diferentes tipos de aplicaciones, creación de proyectos, etc.
+Son aplicaciones que ofrecen la posibilidad de llevar a cabo el proceso completo de desarrollo de software a través de un único programa. Podremos realizar las labores de edición, compilación, depuración, detección de errores, corrección y ejecución de programas escritos en Java o en otros lenguajes de programación, bajo un entorno gráfico (no mediante línea de comandos). Junto a las capacidades descritas, cada entorno añade otras que ayudan a realizar el proceso de programación, como por ejemplo: código fuente coloreado, plantillas para diferentes tipos de aplicaciones, creación de proyectos, etc.
 
 Hay que tener en cuenta que un entorno de desarrollo no es más que una fachada para el proceso de compilación y ejecución de un programa. ¿Qué quiere decir eso? Pues que si tenemos instalado un IDE y no tenemos instalado el compilador, no tenemos nada.
 
@@ -340,9 +338,9 @@ Entre los que son propietarios o de pago tenemos:
 * **Jcreator**
 * **JDeveloper**
 
-![Comparativa entornos para Java](.gitbook/assets/comparativa-ides-java.png)
+![Comparativa entornos para Java](.gitbook/assets/comparativa-ides-java.PNG)
 
-Pero, ¿cuál o cuáles son los más utilizados por la comunidad de programadores Java? El puesto de honor se lo disputan entre **Eclipse, NetBeans** y IntelliJ IDEA. Los dos primeros son gratuitos, con soporte de idiomas y multiplataforma \(Windows, Linux, MacOS\).
+Pero, ¿cuál o cuáles son los más utilizados por la comunidad de programadores Java? El puesto de honor se lo disputan entre **Eclipse, NetBeans** y IntelliJ IDEA. Los dos primeros son gratuitos, con soporte de idiomas y multiplataforma (Windows, Linux, MacOS).
 
 ¿Y cuál será con el que vamos a trabajar? Pues aunque parezca mentira, ninguno de ellos. Vamos a utilizar [**jGRASP**](http://www.jgrasp.org/index.html) , un entorno de desarrollo ligero, creado por la Universidad de Auburn para mejorar la comprensión del software y facilitar el aprendizaje de la programación. Está desarrollado en Java y funciona con Windows, Linux y MacOS sobre máquinas virtuales de Java.
 
@@ -372,15 +370,15 @@ No te impacientes, cada vez estamos más cerca de comenzar la experiencia con el
 
 En el gráfico al que puedes acceder a continuación, se presenta la estructura general de un programa realizado en un lenguaje orientado a objetos como es Java.
 
-![](.gitbook/assets/prog01_cont_r19_estructura_programa_java.jpg)
+![](.gitbook/assets/PROG01\_CONT\_R19\_estructura\_programa\_java.jpg)
 
 Vamos a analizar cada uno de los elementos que aparecen en dicho gráfico:
 
 * **public class Clase\_Principal**: Todos los programas han de incluir una clase como esta. Es una clase general en la que se incluyen todos los demás elementos del programa. Entre otras cosas, contiene el método o función `main()` que representa al programa principal, desde el que se llevará a cabo la ejecución del programa. Esta clase puede contener a su vez otras clases del usuario, pero sólo una puede ser `public`. El nombre del fichero `.Java` que contiene el código fuente de nuestro programa, coincidirá con el nombre de la clase que estamos describiendo en estas líneas.
-* **public static void main \(String\[\] args\)**: Es el método que representa al programa principal, en él se podrán incluir las instrucciones que estimemos oportunas para la ejecución del programa. Desde él se podrá hacer uso del resto de clases creadas. Todos los programas Java tienen un método `main`.
+* **public static void main (String\[] args)**: Es el método que representa al programa principal, en él se podrán incluir las instrucciones que estimemos oportunas para la ejecución del programa. Desde él se podrá hacer uso del resto de clases creadas. Todos los programas Java tienen un método `main`.
 * **Comentarios**: los comentarios se suelen incluir en el código fuente para realizar aclaraciones, anotaciones o cualquier otra indicación que el programador estime oportuna. Estos comentarios pueden introducirse de dos formas, **con** `//` y **con** `/* */`. Con la primera forma estaríamos estableciendo una única línea completa de comentario y, con la segunda, con `/*` comenzaríamos el comentario y éste no terminaría hasta que no insertáramos `*/`.
 * **Bloques de código**: son conjuntos de instrucciones que se marcan mediante la apertura y cierre de llaves `{ }`. El código así marcado es considerado interno al bloque.
-* **Punto y coma**: aunque en el ejemplo no hemos incluido ninguna línea de código que termine con punto y coma, hay que hacer hincapié en que cada línea de código ha de terminar con punto y coma \(`;`\). En caso de no hacerlo, tendremos errores sintácticos. _\*\*_
+* **Punto y coma**: aunque en el ejemplo no hemos incluido ninguna línea de código que termine con punto y coma, hay que hacer hincapié en que cada línea de código ha de terminar con punto y coma (`;`). En caso de no hacerlo, tendremos errores sintácticos. _\*\*_
 
 {% hint style="danger" %}
 Ten en cuenta que **Java distingue entre mayúsculas y minúsculas**. Si le das a la clase principal el nombre PrimerPrograma, el archivo **`.java`** tendrá como identificador **PrimerPrograma.java**, que es totalmente diferente a primerprograma.Java. Además, para Java los elementos PrimerPrograma y primerprograma serían considerados dos clases diferentes dentro del código fuente.
@@ -394,9 +392,9 @@ Los identificadores permiten nombrar los elementos que se están manejando en un
 
 #### 4.2.1 Identificadores
 
-Un **identificador** en Java es una secuencia ilimitada sin espacios de letras y dígitos **Unicode**, de forma que **el primer símbolo de la secuencia debe ser una letra, un símbolo de subrayado \(\_\) o el símbolo dólar \($\)**. Por ejemplo, son válidos los siguientes identificadores:
+Un **identificador** en Java es una secuencia ilimitada sin espacios de letras y dígitos **Unicode**, de forma que **el primer símbolo de la secuencia debe ser una letra, un símbolo de subrayado (\_) o el símbolo dólar ($)**. Por ejemplo, son válidos los siguientes identificadores:
 
-```text
+```
 $x5      ατη    NUM_MAX    _numCuenta
 ```
 
@@ -416,17 +414,17 @@ A la hora de nombrar un identificador existen una serie de normas de estilo de u
 
 * **Java distingue las mayúsculas de las minúsculas**. Por ejemplo, `Alumno` y `alumno` son variables diferentes.
 * **No se suelen utilizar identificadores que comiencen con «$» o «\_»,** además el símbolo del dólar, por convenio, no se utiliza nunca.
-* **No se puede utilizar el valor booleano** \(`true` o `false`\) **ni el valor nulo** \(`null`\).
+* **No se puede utilizar el valor booleano** (`true` o `false`) **ni el valor nulo** (`null`).
 * Los **identificadores deben ser lo más descriptivos posibles**. Es mejor usar palabras completas en vez de abreviaturas crípticas. Así nuestro código será más fácil de leer y comprender. En muchos casos también hará que nuestro código se autodocumente. Por ejemplo, si tenemos que darle el nombre a una variable que almacena los datos de un cliente sería recomendable que la misma se llamara algo así como `FicheroClientes` o `ManejadorCliente`, y no algo poco descriptivo como `Cl33`.
 
 Además de estas restricciones, en la siguiente tabla puedes ver otras convenciones, que no siendo obligatorias, sí son recomendables a la hora de crear identificadores en Java.
 
-| Identificador | Convención | Ejemplo |
-| :--- | :--- | :--- |
-| Variable | Comienza por letra minúscula, y si tienen más de una palabra se colocan juntas y el resto comenzando por mayúsculas. | `numAlumnos, suma` |
-| Constante | En letras mayúsculas, separando las palabras con el guión bajo, por convenio el guión bajo no se utiliza en ningún otro sitio. | `TAM_MAX, PI` |
-| Clase | Comienza por letra mayúscula. | `String, MiTipo` |
-| Método | Comienza con letra minúscula y sigue las mismas reglas que las variables | `modificaValor, obtieneValor` |
+| Identificador | Convención                                                                                                                     | Ejemplo                       |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------ | ----------------------------- |
+| Variable      | Comienza por letra minúscula, y si tienen más de una palabra se colocan juntas y el resto comenzando por mayúsculas.           | `numAlumnos, suma`            |
+| Constante     | En letras mayúsculas, separando las palabras con el guión bajo, por convenio el guión bajo no se utiliza en ningún otro sitio. | `TAM_MAX, PI`                 |
+| Clase         | Comienza por letra mayúscula.                                                                                                  | `String, MiTipo`              |
+| Método        | Comienza con letra minúscula y sigue las mismas reglas que las variables                                                       | `modificaValor, obtieneValor` |
 
 #### 4.2.3 Palabras reservadas
 
@@ -434,18 +432,18 @@ Las palabras reservadas, a veces también llamadas palabras clave o keywords , s
 
 Las palabras reservadas en Java son:
 
-|  |  |  |  |  |
-| :--- | :--- | :--- | :--- | :--- |
-| `abstract` | `continue` | `for` | `new` | `switch` |
-| `assert` | `default` | `goto` | `package` | `synchronized` |
-| `boolean` | `do` | `if` | `private` | `this` |
-| `break` | `double` | `implements` | `protected` | `throw` |
-| `byte` | `else` | `import` | `public` | `throws` |
-| `case` | `enum` | `instanceof` | `return` | `transient` |
-| `catch` | `extends` | `int` | `short` | `try` |
-| `char` | `final` | `interface` | `static` | `void` |
-| `class` | `finally` | `long` | `strictfcode` | `volatile` |
-| `const` | `float` | `native` | `super` | `while` |
+|            |            |              |               |                |
+| ---------- | ---------- | ------------ | ------------- | -------------- |
+| `abstract` | `continue` | `for`        | `new`         | `switch`       |
+| `assert`   | `default`  | `goto`       | `package`     | `synchronized` |
+| `boolean`  | `do`       | `if`         | `private`     | `this`         |
+| `break`    | `double`   | `implements` | `protected`   | `throw`        |
+| `byte`     | `else`     | `import`     | `public`      | `throws`       |
+| `case`     | `enum`     | `instanceof` | `return`      | `transient`    |
+| `catch`    | `extends`  | `int`        | `short`       | `try`          |
+| `char`     | `final`    | `interface`  | `static`      | `void`         |
+| `class`    | `finally`  | `long`       | `strictfcode` | `volatile`     |
+| `const`    | `float`    | `native`     | `super`       | `while`        |
 
 Hay palabras reservadas que no se utilizan en la actualidad, como es el caso de `const` y `goto`, que apenas se utilizan en la actual implementación del lenguaje Java. Por otro lado, puede haber otro tipo de palabras o texto en el lenguaje que aunque no sean palabras reservadas tampoco se pueden utilizar para crear identificadores. Es el caso de `true` y `false` que, aunque puedan parecer palabras reservadas, porque no se pueden utilizar para ningún otro uso en un programa, técnicamente son **literales booleanos**. Igualmente, null es considerado un literal, no una palabra reservada.
 
@@ -455,12 +453,12 @@ Hay palabras reservadas que no se utilizan en la actualidad, como es el caso de 
 
 La salida por pantalla en Java se hace con el objeto `System.out`. Este objeto es una instancia de la clase `PrintStream` del paquete `java.lang`. Si miramos la API de `PrintStream` obtendremos la variedad de métodos para mostrar datos por pantalla, algunos de estos son:
 
-![clase PrintStream](.gitbook/assets/prog01_cont_r56_printstream.png)
+![clase PrintStream](.gitbook/assets/PROG01\_CONT\_R56\_PrintStream.png)
 
 * `void print(String s):` Escribe una cadena de texto.
 * `void println(String x):` Escribe una cadena de texto y termina la línea.
 
-En la orden `print` y `println`, cuando queramos escribir un mensaje y el valor de una variable debemos utilizar el operador de concatenación de cadenas \(+\), por ejemplo:
+En la orden `print` y `println`, cuando queramos escribir un mensaje y el valor de una variable debemos utilizar el operador de concatenación de cadenas (+), por ejemplo:
 
 ```java
 System.out.println(“Bienvenido, “ + nombre);
@@ -470,12 +468,12 @@ Escribe el mensaje de `"Bienvenido, Carlos"`, si el valor de la variable `nombre
 
 Existen unos caracteres especiales que se representan utilizando **secuencias de escape**:
 
-| Secuencia de escape | Significado | Secuencia de escape | Significado |
-| :--- | :--- | :--- | :--- |
-| `\b` | Retroceso | `\r` | Retorno de carro |
-| `\t` | Tabulador | `\''` | Carácter comillas dobles |
-| `\n` | Salto de línea | `\'` | Carácter comillas simples |
-| `\f` | Salto de página | `\\` | Barra diagonal |
+| Secuencia de escape | Significado     | Secuencia de escape | Significado               |
+| ------------------- | --------------- | ------------------- | ------------------------- |
+| `\b`                | Retroceso       | `\r`                | Retorno de carro          |
+| `\t`                | Tabulador       | `\''`               | Carácter comillas dobles  |
+| `\n`                | Salto de línea  | `\'`                | Carácter comillas simples |
+| `\f`                | Salto de página | `\\`                | Barra diagonal            |
 
 ### 4.4 Comentarios
 
@@ -485,20 +483,20 @@ Todos los lenguajes de programación disponen de alguna forma de introducir come
 
 * **Comentarios de una sola línea**. Utilizaremos el delimitador `//` para introducir comentarios de sólo una línea.
 
-```text
+```
 // comentario de una sola línea
 ```
 
-* **Comentarios de múltiples líneas**. Para introducir este tipo de comentarios, utilizaremos una barra inclinada y un asterisco \(`/*`\), al principio del párrafo y un asterisco seguido de una barra inclinada \(`*/`\) al final del mismo.
+* **Comentarios de múltiples líneas**. Para introducir este tipo de comentarios, utilizaremos una barra inclinada y un asterisco (`/*`), al principio del párrafo y un asterisco seguido de una barra inclinada (`*/`) al final del mismo.
 
-```text
+```
 /* Esto es un comentario
 de varias líneas */
 ```
 
 * **Comentarios Javadoc**. Utilizaremos los delimitadores /\*\* y \*/. Al igual que con los comentarios tradicionales, el texto entre estos delimitadores será ignorado por el compilador. Este tipo de comentarios se emplean para generar documentación automática del programa. A través del programa javadoc, incluido en JavaSE , se recogen todos estos comentarios y se llevan a un documento en formato .html.
 
-```text
+```
 /** Comentario de documentación.
 Javadoc extrae los comentarios del código y
 genera un archivo html a partir de este tipo de comentarios
@@ -510,7 +508,7 @@ Una buena práctica de programación es añadir en la última llave que delimita
 {% endhint %}
 
 {% hint style="info" %}
-Si quieres ir familiarizándote con la información que hay en la web de Oracle, en el siguiente enlace puedes encontrar más información sobre la herramienta Javadoc incluida en el Kit de Desarrollo de Java SE \(en inglés\): [Página oficial de Oracle sobre la herramienta Javadoc](http://download.oracle.com/javase/6/docs/technotes/guides/javadoc/index.html)
+Si quieres ir familiarizándote con la información que hay en la web de Oracle, en el siguiente enlace puedes encontrar más información sobre la herramienta Javadoc incluida en el Kit de Desarrollo de Java SE (en inglés): [Página oficial de Oracle sobre la herramienta Javadoc](http://download.oracle.com/javase/6/docs/technotes/guides/javadoc/index.html)
 {% endhint %}
 
 ## 5. Trabajando con variables
@@ -529,7 +527,7 @@ Dentro de la documentación de Oracle sobre Java SE se encuentra el libro “The
 
 ### 5.1 Las variables
 
-Un programa maneja datos para hacer cálculos, presentarlos en informes por pantalla o impresora, solicitarlos al usuario, guardarlos en disco, etc. Para poder manejar esos datos, el programa los guarda en variables.  
+Un programa maneja datos para hacer cálculos, presentarlos en informes por pantalla o impresora, solicitarlos al usuario, guardarlos en disco, etc. Para poder manejar esos datos, el programa los guarda en variables.\
 Una **variable** es una zona en la memoria del computador con un valor que puede ser almacenado para ser usado más tarde en el programa. Las variables vienen determinadas por:
 
 * Un nombre, que permite al programa acceder al valor que contiene en memoria. Debe ser un identificador válido.
@@ -558,11 +556,11 @@ El siguiente ejemplo muestra el código para la creación de varios tipos de var
 * **Variable miembro llamada** **`x`:** Esta variable pertenece a la clase `ejemplovariables`. La variable x puede almacenar valores del tipo primitivo `int`. El valor de esta variable podrá ser modificado en el programa, normalmente por medio de algún otro método que se cree en la clase.
 * **Variable local llamada** **`valorantiguo`:** Esta variable es local porque está creada dentro del método `obtenerX()`. Sólo se podrá acceder a ella dentro del método donde está creada, ya que fuera de él no existe.
 
-![](.gitbook/assets/prog01_cont_r10_ejemplovariables.jpg)
+![](.gitbook/assets/PROG01\_CONT\_R10\_ejemplovariables.jpg)
 
 ### 5.2 Los tipos de datos
 
-En los **lenguajes fuertemente tipados**, a todo dato \(constante, variable o expresión\) le corresponde un tipo que es conocido antes de que se ejecute el programa.
+En los **lenguajes fuertemente tipados**, a todo dato (constante, variable o expresión) le corresponde un tipo que es conocido antes de que se ejecute el programa.
 
 El tipo limita el valor de la variable o expresión, las operaciones que se pueden hacer sobre esos valores, y el significado de esas operaciones. Esto es así porque **un tipo de dato no es más que una especificación de los valores que son válidos para esa variable , y de las operaciones que se pueden realizar con ellos.**
 
@@ -571,7 +569,7 @@ Debido a que el tipo de dato de una variable se conoce durante la revisión que 
 Ahora no es el momento de entrar en detalle sobre la conversión de tipos, pero sí debemos conocer con exactitud de qué tipos de datos dispone el lenguaje Java. Ya hemos visto que las variables, según la información que contienen, se pueden dividir en variables de tipos primitivos y variables referencia. Pero ¿qué es un tipo de dato primitivo? ¿Y un tipo referencia? Esto es lo que vamos a ver a continuación. Los tipos de datos en Java se dividen principalmente en dos categorías:
 
 * **Tipos de datos sencillos o primitivos**. Representan valores simples que vienen predefinidos en el lenguaje; contienen valores únicos, como por ejemplo un carácter o un número.
-* **Tipos de datos referencia.** Se definen con un nombre o referencia \(puntero\) que contiene la dirección en memoria de un valor o grupo de valores. Dentro de este tipo tenemos por ejemplo los vectores o arrays, que son una serie de elementos del mismo tipo, o las clases, que son los modelos o plantillas a partir de los cuales se crean los objetos.
+* **Tipos de datos referencia.** Se definen con un nombre o referencia (puntero) que contiene la dirección en memoria de un valor o grupo de valores. Dentro de este tipo tenemos por ejemplo los vectores o arrays, que son una serie de elementos del mismo tipo, o las clases, que son los modelos o plantillas a partir de los cuales se crean los objetos.
 
 #### **5.2.1 Tipos de datos primitivos**
 
@@ -585,16 +583,16 @@ Por otra parte, a la hora de elegir el tipo de dato que vamos a utilizar ¿qué 
 
 Por ejemplo, el tipo de dato `int` no podría representar la población mundial del planeta, ya que el valor máximo que alcanza es de 2.147.483.647, siendo éste el número máximo de combinaciones posibles con 32 bits, teniendo en cuenta que la representación de los números enteros en Java utiliza complemento a 2. Si queremos representar el valor correspondiente a la población mundial del planeta, cerca de 7 mil millones de habitantes, tendríamos que utilizar al menos un tipo de dato `long`, o si tenemos problemas de espacio un tipo `float`. Sin embargo, los tipos reales tienen otro problema: la **precisión**. Vamos a ver más sobre ellos en el siguiente apartado.
 
-| **Tipo** | **Descripción** | **Bytes** | **Rango** | **Valor por default** |
-| :--- | :--- | :--- | :--- | :--- |
-| byte | Entero muy corto | 1 | -128 a 127 | 0 |
-| short | Entero corto | 2 | -32,768 a 32,767 | 0 |
-| int | Entero | 4 | -2,147,483,648 a 2,147,483,647 | 0 |
-| long | Entero largo | 8 | -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807 | 0L |
-| float | Numero con punto flotante de precisión individual con hasta 7 dígitos significativos | 4 | +/-1.4E-45 \(+/-1.4 times 10-45\) a +/-3.4E38 \(+/-3.4 times 1038\) | 0.0f |
-| double | Numero con punto flotante de precisión doble con hasta 16 dígitos significativos | 8 | +/-4.9E-324 \(+/-4.9 times 10-324\) a +/-1.7E308 \(+/-1.7 times 10308\) | 0.0d |
-| char | Carácter [Unicode](http://en.wikipedia.org/wiki/Unicode) | 2 | \u0000 a \uFFFF | ‘\u0000’ |
-| boolean | Valor Verdadero o Falso | 1 | true o false | false |
+| **Tipo** | **Descripción**                                                                      | **Bytes** | **Rango**                                                           | **Valor por default** |
+| -------- | ------------------------------------------------------------------------------------ | --------- | ------------------------------------------------------------------- | --------------------- |
+| byte     | Entero muy corto                                                                     | 1         | -128 a 127                                                          | 0                     |
+| short    | Entero corto                                                                         | 2         | -32,768 a 32,767                                                    | 0                     |
+| int      | Entero                                                                               | 4         | -2,147,483,648 a 2,147,483,647                                      | 0                     |
+| long     | Entero largo                                                                         | 8         | -9,223,372,036,854,775,808 a 9,223,372,036,854,775,807              | 0L                    |
+| float    | Numero con punto flotante de precisión individual con hasta 7 dígitos significativos | 4         | +/-1.4E-45 (+/-1.4 times 10-45) a +/-3.4E38 (+/-3.4 times 1038)     | 0.0f                  |
+| double   | Numero con punto flotante de precisión doble con hasta 16 dígitos significativos     | 8         | +/-4.9E-324 (+/-4.9 times 10-324) a +/-1.7E308 (+/-1.7 times 10308) | 0.0d                  |
+| char     | Carácter [Unicode](http://en.wikipedia.org/wiki/Unicode)                             | 2         | \u0000 a \uFFFF                                                     | ‘\u0000’              |
+| boolean  | Valor Verdadero o Falso                                                              | 1         | true o false                                                        | false                 |
 
 **5.2.1.1 Tipos de datos reales**
 
@@ -607,7 +605,7 @@ Entre cada dos números reales cualesquiera, siempre tendremos infinitos número
 
 Los números reales se representan en coma flotante, que consiste en trasladar la coma decimal a la primera cifra significativa del valor, con objeto de poder representar el máximo de números posible.
 
-Un número se expresa como: ![Valor igual a mantisa por dos elevado a exponente.](data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAPAAAAARBAMAAAARYzyGAAAALVBMVEX////V1dXKysrAwMC1tbWpqamenp6SkpJubm5iYmJUVFRGRkY4ODgoKCgAAACO6viLAAAAAXRSTlMAQObYZgAAAjdJREFUSMfdlb9uFDEQxn/2NURCI4sHsKykt1bpaLahIc016fcBKHiGFCmgDR3FCYmKgmuo6HiUsfeSIyHMM1B4T1wSUHIUIDGNV+OZ+eafv4W/Lco/kv8HWKbTmSKXpsRTC0QL7uvcIBrx1JSrpRLtrrv9cfYb4NgpWVAulgfq6kzlRRXcKFwskyLgRgGQq6VyaXrTfWexYVCiBc57pQigIyoJFekEOTZ0RBGQ41be4y9bePmhQO7WrGYf3+PHWWVRN/kXVPCKhMyeJSheEdo3ILqFVx880nQXeO8dr1r7BZhVr4IkMiMCeJWO/LNKUVzZ1FF23aXtVosijF5l/2qAR29ykK6Hykqly0iSOase6Vqde5+QBM5WLYNoAestbEfdN4022di+KfbNkALOStNOmbwlWnD2vIAMBWcFlBicFQRXiJMSmH0mA9I9PcErrs7Ur0evYGZmBn69SOdVmo1fL5LCAHmAmHLznIA//L4nv1hIV4BM7pBEDKgcndxo69EZiyDNRo7OUKhQe1htPJv4rR2R7l5gSUAlBgQq6G0n6fzY7mJAOqatqG0ulbiZS/w5ILm8l6OuXzYy6EFA8bodoMVzhTzZxOAbsFfgSWnaHXcTgO+lAb+ek+coMUzPazNjMl4Z82SDHKrXiBwq0DftlOBOBHTdAYyzdeWiMvpy5zlXJHFem01FhiTPCjIkSb4wHqybvT/fjfkagUXrldho7/YvRBHaXa8oznAW2mGhaQFkYQ/m+h80hwIn4xp9gAAAAABJRU5ErkJggg==)
+Un número se expresa como: ![Valor igual a mantisa por dos elevado a exponente.](https://firebasestorage.googleapis.com/v0/b/gitbook-x-prod.appspot.com/o/spaces%2F-MduJTOxgtvgHSkpgvN7%2Fuploads%2Fc4RPyjiK6IPDAvRyxIUL%2Ffile.png?alt=media)
 
 En concreto, sólo se almacena la **mantisa** y el exponente al que va elevada la base. Los bits empleados por la mantisa representan la **precisión** del número real, es decir, el número de cifras decimales significativas que puede tener el número real, mientras que los bits del exponente expresan la diferencia entre el mayor y el menor número representable, lo que viene a ser el **intervalo de representación**.
 
@@ -620,7 +618,7 @@ La mayoría de los programadores en Java emplean el tipo `double` cuando trabaja
 Con el objetivo de conseguir la máxima portabilidad de los programas, Java utiliza el estándar internacional **IEEE 754** para la representación interna de los números en coma flotante, que es una forma de asegurarse de que el resultado de los cálculos sea el mismo para diferentes plataformas.
 
 {% hint style="info" %}
-La siguiente página es la web oficial sobre el estándar internacional IEEE 754-2008 para representación de números en coma flotante \(en inglés\): [Notación IEEE 754](https://es.wikipedia.org/wiki/IEEE_coma_flotante)
+La siguiente página es la web oficial sobre el estándar internacional IEEE 754-2008 para representación de números en coma flotante (en inglés): [Notación IEEE 754](https://es.wikipedia.org/wiki/IEEE\_coma\_flotante)
 {% endhint %}
 
 **5.2.1.2 Literales de los tipos primitivos**
@@ -632,21 +630,21 @@ Los **literales booleanos** tienen dos únicos valores que puede aceptar el tipo
 Los **literales enteros** se pueden representar en tres notaciones:
 
 * **Decimal**: por ejemplo `20`. Es la forma más común.
-* **Octal**: por ejemplo `024`. Un número en octal siempre empieza por cero, seguido de dígitos octales \(del 0 al 7\).
-* **Hexadecimal**: por ejemplo `0x14`. Un número en hexadecimal siempre empieza por `0x` seguido de dígitos hexadecimales \(del 0 al 9, de la ‘a’ a la ‘f’ o de la ‘A’ a la ‘F’\).
+* **Octal**: por ejemplo `024`. Un número en octal siempre empieza por cero, seguido de dígitos octales (del 0 al 7).
+* **Hexadecimal**: por ejemplo `0x14`. Un número en hexadecimal siempre empieza por `0x` seguido de dígitos hexadecimales (del 0 al 9, de la ‘a’ a la ‘f’ o de la ‘A’ a la ‘F’).
 
 Las constantes literales de tipo `long` se le debe añadir detrás una **l** ó **L**, por ejemplo `873L`, si no se considera por defecto de tipo `int`. Se suele utilizar **L** para evitar la confusión de la ele minúscula con 1.
 
-Los **literales** **reales** o en coma flotante se expresan con coma decimal o en notación científica, o sea, seguidos de un exponente **e** ó **E**. El valor puede finalizarse con una f o una F para indica el formato float o con una d o una D para indicar el formato `double` \(por defecto es `double`\). Por ejemplo, podemos representar un mismo literal real de las siguientes formas: `13.2, 13.2D, 1.32e1, 0.132E2`. Otras constantes literales reales son por ejemplo: `.54, 31.21E-5, 2.f, 6.022137e+23f, 3.141e-9d.`
+Los **literales** **reales** o en coma flotante se expresan con coma decimal o en notación científica, o sea, seguidos de un exponente **e** ó **E**. El valor puede finalizarse con una f o una F para indica el formato float o con una d o una D para indicar el formato `double` (por defecto es `double`). Por ejemplo, podemos representar un mismo literal real de las siguientes formas: `13.2, 13.2D, 1.32e1, 0.132E2`. Otras constantes literales reales son por ejemplo: `.54, 31.21E-5, 2.f, 6.022137e+23f, 3.141e-9d.`
 
-Un **literal carácter** puede escribirse como un carácter entre comillas simples como `'a', 'ñ', 'Z', 'p'`, etc. o por su código de la tabla Unicode, anteponiendo la secuencia de escape `‘\’` si el valor lo ponemos en octal o `‘\u’` si ponemos el valor en hexadecimal. Por ejemplo, si sabemos que tanto en ASCII como en Unicode, la letra A \(mayúscula\) es el símbolo número 65, y que 65 en octal es 101 y 41 en hexadecimal, podemos representar esta letra como `'\101'` en octal y `'\u0041'` en hexadecimal. Existen unos caracteres especiales que se representan utilizando secuencias de escape:
+Un **literal carácter** puede escribirse como un carácter entre comillas simples como `'a', 'ñ', 'Z', 'p'`, etc. o por su código de la tabla Unicode, anteponiendo la secuencia de escape `‘\’` si el valor lo ponemos en octal o `‘\u’` si ponemos el valor en hexadecimal. Por ejemplo, si sabemos que tanto en ASCII como en Unicode, la letra A (mayúscula) es el símbolo número 65, y que 65 en octal es 101 y 41 en hexadecimal, podemos representar esta letra como `'\101'` en octal y `'\u0041'` en hexadecimal. Existen unos caracteres especiales que se representan utilizando secuencias de escape:
 
-| Secuencia de escape | Significado | Secuencia de escape | Significado |
-| :--- | :--- | :--- | :--- |
-| `\b` | Retroceso | `\r` | Retorno de carro |
-| `\t` | Tabulador | `\''` | Carácter comillas dobles |
-| `\n` | Salto de línea | `\'` | Carácter comillas simples |
-| `\f` | Salto de página | `\\` | Barra diagonal |
+| Secuencia de escape | Significado     | Secuencia de escape | Significado               |
+| ------------------- | --------------- | ------------------- | ------------------------- |
+| `\b`                | Retroceso       | `\r`                | Retorno de carro          |
+| `\t`                | Tabulador       | `\''`               | Carácter comillas dobles  |
+| `\n`                | Salto de línea  | `\'`                | Carácter comillas simples |
+| `\f`                | Salto de página | `\\`                | Barra diagonal            |
 
 {% hint style="success" %}
 **Normalmente, los objetos en Java deben ser creados con la orden `new`. Sin embargo, los literales String no lo necesitan ya que son objetos que se crean implícitamente por Java.**
@@ -654,7 +652,7 @@ Un **literal carácter** puede escribirse como un carácter entre comillas simpl
 
 Los **literales de cadenas de caracteres** se indican entre comillas dobles. En el ejemplo anterior “`El primer programa`” es un literal de tipo cadena de caracteres. Al construir una cadena de caracteres se puede incluir cualquier carácter Unicode excepto un carácter de retorno de carro, por ejemplo en la siguiente instrucción utilizamos la secuencia de escape \’’ para escribir dobles comillas dentro del mensaje:
 
-```text
+```
 String texto = "Juan dijo: \"Hoy hace un día fantástico…\"";
 ```
 
@@ -666,7 +664,7 @@ Llegados a este punto cabe preguntarnos ¿cómo se crean las variables en un pro
 
 Las variables se pueden declarar en cualquier bloque de código, dentro de llaves. Y lo hacemos indicando su identificador y el tipo de dato, separadas por comas si vamos a declarar varias a la vez, por ejemplo:
 
-```text
+```
 int numAlumnos = 15;
 double radio = 3.14, importe = 102.95;
 ```
@@ -675,16 +673,16 @@ De esta forma, estamos declarando `numAlumnos` como una variable de tipo `int`, 
 
 Si la variable va a permanecer inalterable a lo largo del programa, la declararemos como `constante`, utilizando la palabra reservada `final` de la siguiente forma:
 
-```text
+```
 final double PI = 3.1415926536;
 ```
 
 En ocasiones puede que al declarar una variable no le demos valor, ¿qué crees que ocurre en estos casos? Pues que el compilador le asigna un valor por defecto, aunque depende del tipo de variable que se trate:
 
-* Las **variables miembro** sí se inicializan automáticamente, si no les damos un valor. Cuando son de tipo numérico, se inicializan por defecto a `0`, si don de tipo carácter, se inicializan al carácter `null` \(\0\), si son de tipo `boolean` se les asigna el valor por defecto `false`, y si son tipo referenciado se inicializan a `null`.
+* Las **variables miembro** sí se inicializan automáticamente, si no les damos un valor. Cuando son de tipo numérico, se inicializan por defecto a `0`, si don de tipo carácter, se inicializan al carácter `null` (\0), si son de tipo `boolean` se les asigna el valor por defecto `false`, y si son tipo referenciado se inicializan a `null`.
 * Las **variables locales** no se inicializan automáticamente. Debemos asignarles nosotros un valor antes de ser usadas, ya que si el compilador detecta que la variable se usa antes de que se le asigne un valor, produce un error. Por ejemplo en este caso:
 
-```text
+```
 int p;
 int q = p; // error
 ```
@@ -695,7 +693,7 @@ dará error ya que se intenta usar la variable local p antes de haberse iniciali
 
 A partir de los ocho tipos datos primitivos, se pueden construir otros tipos de datos. Estos tipos de datos se llaman **tipos referenciados** o **referencias**, porque se utilizan para almacenar la dirección de los datos en la memoria del ordenador.
 
-```text
+```
 int[] arrayDeEnteros;
 Cuenta cuentaCliente;
 ```
@@ -706,7 +704,7 @@ Como comentábamos al principio del apartado de Tipos de datos, cualquier aplica
 
 Además de los ocho tipos de datos primitivos que ya hemos descrito, Java proporciona un tratamiento especial a los textos o cadenas de caracteres mediante el tipo de dato `String`. Java crea automáticamente un nuevo objeto de tipo `String` cuando se encuentra una cadena de caracteres encerrada entre comillas dobles. En realidad se trata de objetos, y por tanto son tipos referenciados, pero se pueden utilizar de forma sencilla como si fueran variables de tipos primitivos:
 
-```text
+```
 String mensaje;
 mensaje = "El primer programa";
 ```
@@ -715,7 +713,7 @@ Hemos visto qué son las variables, cómo se declaran y los tipos de datos que p
 
 Para mostrar por pantalla un mensaje utilizamos `System.out`, conocido como la salida estándar del programa. Este método lo que hace es escribir un conjunto de caracteres a través de la línea de comandos. Podemos utilizar `System.out.print` o `System.out.println`. En el segundo caso lo que hace el método es que justo después de escribir el mensaje, sitúa el cursor al principio de la línea siguiente. El texto en color gris que aparece entre caracteres `//` son comentarios que permiten documentar el código, pero no son tenidos en cuenta por el compilador y, por tanto, no afectan a la ejecución del programa.
 
-![](.gitbook/assets/prog01_cont_r18_ejemplotipos.jpg)
+![](.gitbook/assets/PROG01\_CONT\_R18\_Ejemplotipos.jpg)
 
 #### 5.2.4 Tipos enumerados
 
@@ -729,11 +727,11 @@ Al considerar Java este tipo de datos como si de una clase se tratara, no sólo 
 
 En el siguiente ejemplo puedes comprobar el uso que se hace de los tipos de datos enumerados. Tenemos una variable `Dias` que almacena los días de la semana. Para acceder a cada elemento del tipo enumerado se utiliza el nombre de la variable seguido de un punto y el valor en la lista. Más tarde veremos que podemos añadir métodos y campos o variables en la declaración del tipo enumerado, ya que como hemos comentado un tipo enumerado en Java tiene el mismo tratamiento que las clases.
 
-![](.gitbook/assets/prog01_cont_r20_ejemploenumerados.jpg)
+![](.gitbook/assets/PROG01\_CONT\_R20\_EjemploEnumerados.jpg)
 
 En este ejemplo hemos utilizado el método `System.out.print`. Como podrás comprobar si lo ejecutas, la instrucción número 18 escribe el texto que tiene entre comillas pero no salta a la siguiente línea, por lo que el la instrucción número 19 escribe justo a continuación.
 
-Sin embargo, también podemos escribir varias líneas usando una única sentencia. Así lo hacemos en la instrucción número 20, la cual imprime como resultado tres líneas de texto. Para ello hemos utilizado un carácter especial, llamado **carácter escape** \(`\`\). Este carácter sirve para darle ciertas órdenes al compilador, en lugar de que salga impreso en pantalla. Después del carácter de escape viene otro carácter que indica la orden a realizar, juntos reciben el nombre de **secuencia de escape**. La secuencia de escape `\n` recibe el nombre de **carácter de nueva línea**. Cada vez que el compilador se encuentra en un texto ese carácter, el resultado es que mueve el cursor al principio de la línea siguiente. En el próximo apartado vamos a ver algunas de las secuencias de escape más utilizadas.
+Sin embargo, también podemos escribir varias líneas usando una única sentencia. Así lo hacemos en la instrucción número 20, la cual imprime como resultado tres líneas de texto. Para ello hemos utilizado un carácter especial, llamado **carácter escape** (`\`). Este carácter sirve para darle ciertas órdenes al compilador, en lugar de que salga impreso en pantalla. Después del carácter de escape viene otro carácter que indica la orden a realizar, juntos reciben el nombre de **secuencia de escape**. La secuencia de escape `\n` recibe el nombre de **carácter de nueva línea**. Cada vez que el compilador se encuentra en un texto ese carácter, el resultado es que mueve el cursor al principio de la línea siguiente. En el próximo apartado vamos a ver algunas de las secuencias de escape más utilizadas.
 
 ### 5.3 Operadores y expresiones
 
@@ -741,16 +739,16 @@ Los **operadores** llevan a cabo operaciones sobre un conjunto de datos u operan
 
 Los operadores se combinan con los literales y/o identificadores para formar expresiones. Una **expresión** es una combinación de operadores y operandos que se evalúa produciendo un único resultado de un tipo determinado.
 
-El resultado de una expresión puede ser usado como parte de otra expresión o en una sentencia o instrucción. Las expresiones, combinadas con algunas palabras reservadas o por sí mismas, forman las llamadas **sentencias** o **instrucciones**.  
+El resultado de una expresión puede ser usado como parte de otra expresión o en una sentencia o instrucción. Las expresiones, combinadas con algunas palabras reservadas o por sí mismas, forman las llamadas **sentencias** o **instrucciones**.\
 Por ejemplo, pensemos en la siguiente expresión Java:
 
-```text
+```
 i + 1
 ```
 
 Con esta expresión estamos utilizando un operador aritmético para sumarle una cantidad a la variable i, pero es necesario indicar al programa qué hacer con el resultado de dicha expresión:
 
-```text
+```
 suma = i + 1;
 ```
 
@@ -766,60 +764,35 @@ Los operadores aritméticos son aquellos operados que combinados con los operand
 
 Operadores aritméticos básicos:
 
-| Operador | Operación Java | Expresión Java | Resultado |
-| :--- | :--- | :--- | :--- |
-|  |  |  |  |
-| - | Operador unario de cambio de signo | -10 | -10 |
-| + | Adición | 1.2 + 9.3 | 10.5 |
-| - | Sustracción | 312.5 – 12.3 | 300.2 |
-| \* | Multiplicación | 1.7 \* 1.2 | 1.02 |
-| / | División \(entera o real\) | 0.5 / 0.2 | 2.5 |
-| **%** | Resto de la división entera | 25 % 3 | 1 |
+| Operador | Operación Java                     | Expresión Java | Resultado |
+| -------- | ---------------------------------- | -------------- | --------- |
+|          |                                    |                |           |
+| -        | Operador unario de cambio de signo | -10            | -10       |
+| +        | Adición                            | 1.2 + 9.3      | 10.5      |
+| -        | Sustracción                        | 312.5 – 12.3   | 300.2     |
+| \*       | Multiplicación                     | 1.7 \* 1.2     | 1.02      |
+| /        | División (entera o real)           | 0.5 / 0.2      | 2.5       |
+| **%**    | Resto de la división entera        | 25 % 3         | 1         |
 
 El resultado de este tipo de expresiones depende de los operandos que utilicen:
 
-| Tipo de los operandos | Resultado |
-| :--- | :--- |
-| Un operando de tipo `long` y ninguno real \(`float` o `double`\) | `long` |
-| Ningún operando de tipo `long` ni real \(`float` o `double`\) | `int` |
-| Al menos un operando de tipo `double` | `double` |
-| Al menos un operando de tipo `float` y ninguno `double` | `float` |
+| Tipo de los operandos                                          | Resultado |
+| -------------------------------------------------------------- | --------- |
+| Un operando de tipo `long` y ninguno real (`float` o `double`) | `long`    |
+| Ningún operando de tipo `long` ni real (`float` o `double`)    | `int`     |
+| Al menos un operando de tipo `double`                          | `double`  |
+| Al menos un operando de tipo `float` y ninguno `double`        | `float`   |
 
 Otro tipo de operadores aritméticos son los operadores unarios incrementales y decrementales. Producen un resultado del mismo tipo que el operando, y podemos utilizarlos con **notación prefija**, si el operador aparece antes que el operando, o **notación** **postfija**, si el operador aparece después del operando. En la tabla puedes un ejemplo de de utilización de cada operador incremental.
 
 Operadores incrementales en Java:
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Tipo operador</th>
-      <th style="text-align:left">Expresi&#xF3;n Java</th>
-      <th style="text-align:left"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">++ (incremental)</td>
-      <td style="text-align:left">
-        <p>Prefija:</p>
-        <p>x=3;</p>
-        <p>y=++x; // x vale 4 e y vale 4</p>
-      </td>
-      <td style="text-align:left">
-        <p>Postfija:</p>
-        <p>x=3;</p>
-        <p>y=x++; // x vale 4 e y vale 3</p>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:left">-- (decremental)</td>
-      <td style="text-align:left">5-- // el resultado es 4</td>
-      <td style="text-align:left"></td>
-    </tr>
-  </tbody>
-</table>
+| Tipo operador    | Expresión Java                                                   |                                                                   |
+| ---------------- | ---------------------------------------------------------------- | ----------------------------------------------------------------- |
+| ++ (incremental) | <p>Prefija: </p><p>x=3;</p><p>y=++x;  // x vale 4 e y vale 4</p> | <p>Postfija:</p><p>x=3; </p><p>y=x++;  // x vale 4 e y vale 3</p> |
+| -- (decremental) | 5-- // el resultado es 4                                         |                                                                   |
 
-![](.gitbook/assets/prog01_cont_r25_operadoresaritmeticos.jpg)
+![](.gitbook/assets/PROG01\_CONT\_R25\_Operadoresaritmeticos.jpg)
 
 En el ejemplo vemos un programa básico que utiliza operadores aritméticos. Observa que usamos `System.out.printf` para mostrar por pantalla un texto formateado. El texto entre dobles comillas son los argumentos del método `printf` y si usamos más de uno, se separan con comas. Primero indicamos cómo queremos que salga el texto, y después el texto que queremos mostrar. Fíjate que con el primer `%s` nos estamos refiriendo a una variable de tipo `String`, o sea, a la primera cadena de texto, con el siguiente `%s` a la segunda cadena y con el último `%s` a la tercena. Con `%f` nos referimos a un argumento de tipo float, etc.
 
@@ -832,37 +805,37 @@ Por ejemplo, el operador `“+=”` suma el valor de la expresión a la derecha 
 Operaciones de asignación combinados en Java:
 
 | Operador | Ejemplo en Java | Expresión equivalente |
-| :--- | :--- | :--- |
-| `+=` | `op1 += op2` | `op1 = op1 + op2` |
-| `-=` | `op1 -= op2` | `op1 = op1 - op2` |
-| `*=` | `op1 *= op2` | `op1 = op1 * op2` |
-| `/=` | `op1 /= op2` | `op1 = op1 / op2` |
-| `%=` | `op1 %= op2` | `op1 = op1 % op2` |
+| -------- | --------------- | --------------------- |
+| `+=`     | `op1 += op2`    | `op1 = op1 + op2`     |
+| `-=`     | `op1 -= op2`    | `op1 = op1 - op2`     |
+| `*=`     | `op1 *= op2`    | `op1 = op1 * op2`     |
+| `/=`     | `op1 /= op2`    | `op1 = op1 / op2`     |
+| `%=`     | `op1 %= op2`    | `op1 = op1 % op2`     |
 
 Un ejemplo de operadores de asignación combinados lo tenemos a continuación:
 
-![](.gitbook/assets/prog01_cont_r27_ejemplocombinados.jpg)
+![](.gitbook/assets/PROG01\_CONT\_R27\_Ejemplocombinados.jpg)
 
 #### 5.3.3 Operaciones de relación
 
-Los operadores relacionales se utilizan para comparar datos de tipo primitivo \(numérico, carácter y booleano\). El resultado se utilizará en otras expresiones o sentencias, que ejecutarán una acción u otra en función de si se cumple o no la relación.
+Los operadores relacionales se utilizan para comparar datos de tipo primitivo (numérico, carácter y booleano). El resultado se utilizará en otras expresiones o sentencias, que ejecutarán una acción u otra en función de si se cumple o no la relación.
 
 Estas expresiones en Java dan siempre como resultado un valor booleano true o false. En la tabla siguiente aparecen los operadores relacionales en Java.
 
 Operaciones relacionales en Java:
 
-| Operador | Ejemplo en Java | Significado |
-| :--- | :--- | :--- |
-| `==` | `op1 == op2` | op1 igual a op2 |
-| `!=` | `op1 != op2` | op1 distinto de op2 |
-| `>` | `op1 > op2` | op1 mayor que op2 |
-| `<` | `op1 < op2` | op1 menor que op2 |
-| `>=` | `op1 >= op2` | op1 mayor o igual que op2 |
-| `<=` | `op1 <= op2` | op1 menor o igual que op2 |
+| Operador | Ejemplo en Java | Significado               |
+| -------- | --------------- | ------------------------- |
+| `==`     | `op1 == op2`    | op1 igual a op2           |
+| `!=`     | `op1 != op2`    | op1 distinto de op2       |
+| `>`      | `op1 > op2`     | op1 mayor que op2         |
+| `<`      | `op1 < op2`     | op1 menor que op2         |
+| `>=`     | `op1 >= op2`    | op1 mayor o igual que op2 |
+| `<=`     | `op1 <= op2`    | op1 menor o igual que op2 |
 
 Hasta ahora hemos visto ejemplos que creaban variables y se inicializaban con algún valor. Pero ¿y si lo que queremos es que el usuario introduzca un valor al programa? Entonces debemos agregarle interactividad a nuestro programa, por ejemplo utilizando la clase `Scanner`. Aunque no hemos visto todavía qué son las clases y los objetos, de momento vamos a pensar que la clase `Scanner` nos va a permitir leer los datos que se escriben por teclado, y que para usarla es necesario importar el paquete de clases que la contiene. El código del ejemplo lo tienes a continuación. El programa se quedará esperando a que el usuario escriba algo en el teclado y pulse la tecla intro. En ese momento se convierte lo leído a un valor del tipo `int` y lo guarda en la variable indicada. Además de los operadores relacionales, en este ejemplo utilizamos también el operador condicional, que compara si los números son iguales. Si lo son, devuelve la cadena iguales y sino, la cadena distintos.
 
-![](.gitbook/assets/prog01_cont_r30_ejemplorelacionalycondicional.jpg)
+![](.gitbook/assets/PROG01\_CONT\_R30\_Ejemplorelacionalycondicional.jpg)
 
 #### 5.3.4 Precedencia de operadores
 
@@ -873,15 +846,15 @@ Las reglas de precedencia de operadores que utiliza Java coinciden con las regla
 * La multiplicación, división y resto de una operación se evalúan primero. Si dentro de la misma expresión tengo varias operaciones de este tipo, empezaré evaluándolas de izquierda a derecha.
 * La suma y la resta se aplican después que las anteriores. De la misma forma, si dentro de la misma expresión tengo varias sumas y restas empezaré evaluándolas de izquierda a derecha.
 
-A la hora de evaluar una expresión es necesario tener en cuenta la **asociatividad** de los operadores. La asociatividad indica qué operador se evalúa antes, en condiciones de igualdad de precedencia. Los operadores de asignación, el operador condicional \(`?:`\), los operadores incrementales \(`++, --`\) y el casting son asociativos por la derecha. El resto de operadores son asociativos por la izquierda, es decir, que se empiezan a calcular en el mismo orden en el que están escritos: de izquierda a derecha. Por ejemplo, en la expresión siguiente:
+A la hora de evaluar una expresión es necesario tener en cuenta la **asociatividad** de los operadores. La asociatividad indica qué operador se evalúa antes, en condiciones de igualdad de precedencia. Los operadores de asignación, el operador condicional (`?:`), los operadores incrementales (`++, --`) y el casting son asociativos por la derecha. El resto de operadores son asociativos por la izquierda, es decir, que se empiezan a calcular en el mismo orden en el que están escritos: de izquierda a derecha. Por ejemplo, en la expresión siguiente:
 
-```text
+```
 10 / 2 * 5
 ```
 
 Realmente la operación que se realiza es `(10 / 2 ) * 5`, porque ambos operadores, división y multiplicación, tienen igual precedencia y por tanto se evalúa primero el que antes nos encontramos por la izquierda, que es la división. El resultado de la expresión es `25`. Si fueran asociativos por la derecha, puedes comprobar que el resultado sería diferente, primero multiplicaríamos `2 * 5` y luego dividiríamos entre `10`, por lo que el resultado sería 1. En esta otra expresión:
 
-```text
+```
 x = y = z = 1
 ```
 
@@ -891,22 +864,22 @@ En la tabla se detalla el orden de precedencia y la asociatividad de los operado
 
 Orden de precedencia de operadores en Java
 
-| Operador | Tipo | Asociatividad |
-| :--- | :--- | :--- |
-| `++ --` | Unario, notación postfija | Derecha |
-| `++ -- + -`  `(cast) ! ~` | Unario, notación prefija | Derecha |
-| `* / %` | Aritméticos | Izquierda |
-| `+ -` | Aritméticos | Izquierda |
-| `<< >> >>>` | Bits | Izquierda |
-| `< <= > >=` | Relacionales | Izquierda |
-| `== !=` | Relacionales | Izquierda |
-| `&` | Lógico, Bits | Izquierda |
-| `^` | Lógico, Bits | Izquierda |
-| `|` | Lógico, Bits | Izquierda |
-| `&&` | Lógico | Izquierda |
-| `||` | Lógico | Izquierda |
-| `?:` | Operador condicional | Derecha |
-| `= += -= *=`  `/= %=` | Asignación | Derecha |
+| Operador                                                  | Tipo                      | Asociatividad |
+| --------------------------------------------------------- | ------------------------- | ------------- |
+| `++ --`                                                   | Unario, notación postfija | Derecha       |
+| <p><code>++ -- + -</code><br> <code>(cast) ! ~</code></p> | Unario, notación prefija  | Derecha       |
+| `* / %`                                                   | Aritméticos               | Izquierda     |
+| `+ -`                                                     | Aritméticos               | Izquierda     |
+| `<< >> >>>`                                               | Bits                      | Izquierda     |
+| `< <= > >=`                                               | Relacionales              | Izquierda     |
+| `== !=`                                                   | Relacionales              | Izquierda     |
+| `&`                                                       | Lógico, Bits              | Izquierda     |
+| `^`                                                       | Lógico, Bits              | Izquierda     |
+| `\|`                                                      | Lógico, Bits              | Izquierda     |
+| `&&`                                                      | Lógico                    | Izquierda     |
+| `\|\|`                                                    | Lógico                    | Izquierda     |
+| `?:`                                                      | Operador condicional      | Derecha       |
+| <p><code>= += -= *=</code><br> <code>/= %=</code></p>     | Asignación                | Derecha       |
 
 ### 5.4 Conversión de tipo
 
@@ -914,12 +887,12 @@ Imagina que queremos dividir un número entre otro ¿tendrá decimales el result
 
 Las conversiones de tipo se realizan para hacer que el resultado de una expresión sea del tipo que nosotros deseamos, en el ejemplo anterior para hacer que el resultado de la división sea de tipo real y, por ende, tenga decimales. Existen dos tipos de conversiones:
 
-* **Conversiones automáticas**. Cuando a una variable de un tipo se le asigna un valor de otro tipo numérico con menos bits para su representación, se realiza una conversión automática. En ese caso, el valor se dice que es promocionado al tipo más grande \(el de la variable\), para poder hacer la asignación. También se realizan conversiones automáticas en las operaciones aritméticas, cuando estamos utilizando valores de distinto tipo, el valor más pequeño se promociona al valor más grande, ya que el tipo mayor siempre podrá representar cualquier valor del tipo menor \(por ejemplo, de `int` a `long` o de `float` a `double`\).
+* **Conversiones automáticas**. Cuando a una variable de un tipo se le asigna un valor de otro tipo numérico con menos bits para su representación, se realiza una conversión automática. En ese caso, el valor se dice que es promocionado al tipo más grande (el de la variable), para poder hacer la asignación. También se realizan conversiones automáticas en las operaciones aritméticas, cuando estamos utilizando valores de distinto tipo, el valor más pequeño se promociona al valor más grande, ya que el tipo mayor siempre podrá representar cualquier valor del tipo menor (por ejemplo, de `int` a `long` o de `float` a `double`).
 * **Conversiones explícitas**. Cuando hacemos una conversión de un tipo con más bits a un tipo con menos bits. En estos casos debemos indicar que queremos hacer la conversión de manera expresa, ya que se puede producir una pérdida de datos y hemos de ser conscientes de ello. Este tipo de conversiones se realiza con el **operador `cast`**. El operador `cast` es un operador unario que se forma colocando delante del valor a convertir el tipo de dato entre paréntesis. Tiene la misma precedencia que el resto de operadores unarios y se asocia de izquierda a derecha.
 
 Debemos tener en cuenta que **un valor numérico nunca puede ser asignado a una variable de un tipo menor en rango, si no es con una conversión explícita**. Por ejemplo:
 
-```text
+```
 int a;
 byte b;
 a = 12;               // no se realiza conversión alguna  
@@ -942,10 +915,10 @@ Nuestros programas ya son capaces de operar con datos de tipo entero y real, per
 
 A este tipo de estructuras se las denomina **estructuras de repetición**, estructuras repetitivas, **bucles** o estructuras **iterativas**. En Java existen cuatro clases de bucles:
 
-* Bucle `for` \(repite para\)
-* Bucle `for/in` \(repite para cada\)
-* Bucle `While` \(repite mientras\)
-* Bucle `Do While` \(repite hasta\)
+* Bucle `for` (repite para)
+* Bucle `for/in` (repite para cada)
+* Bucle `While` (repite mientras)
+* Bucle `Do While` (repite hasta)
 
 Los bucles `for` y `for/in` se consideran bucles **controlados por contador**. Por el contrario, los bucles `while` y `do...while` se consideran bucles **controlados por sucesos.**
 
@@ -971,7 +944,7 @@ En general, existen tres operaciones que se llevan a cabo en este tipo de bucles
 * Se evalúa el valor de la variable contador, por medio de una comparación de su valor con el número de iteraciones especificado.
 * Se modifica o actualiza el valor del contador a través de incrementos o decrementos de éste, en cada una de las iteraciones.
 
-![](.gitbook/assets/prog01_cont_r05_diagramafor.jpg)
+![](.gitbook/assets/PROG01\_CONT\_R05\_diagramafor.jpg)
 
 {% hint style="danger" %}
 La inicialización de la variable contadora debe realizase correctamente para garantizar que el bucle se lleve a cabo, al menos, la primera repetición de su código interno.
@@ -1043,7 +1016,7 @@ Para ello, Java proporciona los métodos. Estos permiten agrupar un conjunto de 
 
 Para poder trabajar con métodos, primero tendremos que **declarar** el método:
 
-```text
+```
 public static void identificadoMetodo() {
     sentencia 1;
     sentencia 2;
@@ -1054,7 +1027,7 @@ public static void identificadoMetodo() {
 
 Y luego realizar **llamadas** a él donde los queramos utilizar:
 
-```text
+```
 identificadorMetodo();
 ```
 
@@ -1063,4 +1036,3 @@ Por ahora, hasta saber más sobre los métodos, los vamos a declarar **todos com
 
 Más adelante, iremos viendo otras características de los métodos.
 {% endhint %}
-
